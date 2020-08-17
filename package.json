@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "preinstall": "bin/preinstall.js"
+    "preinstall": "node bin/preinstall.js"
   },
   "dependencies": {},
   "devDependencies": {
