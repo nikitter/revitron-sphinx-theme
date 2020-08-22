@@ -111,7 +111,7 @@
 			li.toctree-l#{$toc_level}
 				> a
 					@extend %toctree_link_color
-					padding-left: $gutter * ((($toc_level - 1) * 0.4) + 1)
+					padding-left: $gutter * ((($toc_level - 1) * 0.9) + 1)
 				
 				a:hover span.toctree-expand
 					@extend %toctree_hover_link_color
@@ -188,7 +188,7 @@
 		font-weight: bold
 		display: inline-block
 		padding: 0
-		margin-bottom: 4.55rem
+		margin-bottom: 4.25rem
 		+font-smooth
 		img.logo
 			display: block  // display on its own line all the time

@@ -1,7 +1,6 @@
 // Set uniform (but not relative) base font size
 html
 	font-size: 16px
-	
 	background-color: $bg
 +media(new-breakpoint(min-width 1400px 12))
 	html
@@ -71,30 +70,30 @@ body
 
 .wy-nav-top
 	display: none
-	background: $link-color
-	color: $white
-	padding: $gutter / 4 $gutter / 2
+	background: $bg
+	color: $text
+	border-bottom: $hairline
+	padding: 0 $gutter / 1.75
 	position: relative
-	line-height: 50px
-	text-align: center
+	line-height: 3.8rem
+	text-align: left
 	font-size: 100%
 	+clearfix
 	a
-		color: $white
-		font-weight: bold
+		color: inherit
+		font-weight: normal
 		+font-smooth
 	img
-		margin-right: $base-line-height / 2
-		height: 45px
-		width: 45px
-		background-color: $menu-logo-color
-		padding: 5px
-		border-radius: 100%
+		float: right
+		height: 2.2rem
+		margin: 0.8rem 0
 	i
-		font-size: 30px
+		font-size: 1rem
+		line-height: inherit
 		float: left
 		cursor: pointer
 		padding-top: inherit
+		padding-right: inherit
 
 .wy-nav-content-wrap
 	margin-left: $nav-desktop-width

@@ -179,6 +179,9 @@
         {% block mobile_nav %}
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="{{ pathto(master_doc) }}">{{ project }}</a>
+		  {% if logo %}
+		  	<img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="{{ _('Logo') }}"/>
+		  {% endif %}
         {% endblock %}
       </nav>
 

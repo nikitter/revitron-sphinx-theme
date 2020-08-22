@@ -50,7 +50,6 @@ gettext_compact = False
 master_doc = 'index'
 suppress_warnings = ['image.nonlocal_uri']
 
-
 intersphinx_mapping = {
     'rtd': ('https://docs.readthedocs.io/en/latest/', None),
     'sphinx': ('http://www.sphinx-doc.org/en/stable/', None),
@@ -61,6 +60,7 @@ html_theme_options = {
     'logo_only': True,
     'navigation_depth': 5,
 }
+
 html_context = {}
 
 if not 'READTHEDOCS' in os.environ:
