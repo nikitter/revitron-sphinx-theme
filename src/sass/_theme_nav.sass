@@ -1,0 +1,220 @@
+.wy-menu
+	a:hover
+		text-decoration: none
+	
+
+.wy-menu-vertical
+	width: $nav-desktop-width
+	margin-top: $space-nav * -1
+
+	header, p.caption
+		color: $nav-caption
+		line-height: $base-line-height
+		padding: $space-nav $gutter
+		margin: $space-s 0 0 0
+		display: block
+		
+	& > :first-child
+		margin-top: 0 !important
+	
+		
+	li
+		&.divide-top
+			border-top: $border
+		&.divide-bottom
+			border-bottom: $border
+		&.current
+			color: $text
+			//background: $bg
+			a
+				color: $menu-link-color
+				border-right: solid 1px border
+				padding: $space-nav $gutter * 1.5
+				&:hover
+					background: $bg-nav-hover
+		&.toctree-l1.current
+			//border-right: 4px solid $text
+			//background-color: $bg-panel
+		code
+			border: none
+			background: inherit
+			color: inherit
+			padding-left: 0
+			padding-right: 0
+		// Expand links
+		span.toctree-expand
+			float: left
+			margin-left: -1.25rem
+			@extend .fa
+			@extend .fa-angle-right
+			@extend %expand-icon
+
+		a.reference
+			line-height: $base-line-height
+		a.reference.current, a.reference.current:hover
+			color: $text
+			background-color: $bg-panel
+			border-right: 4px solid
+		
+
+	// On state for the first level
+	li.on a, li.current > a
+		color: $menu-link-color
+		padding: $space-nav $gutter
+		font-weight: inherit
+		position: relative
+		//background: $menu-vertical-background-color
+		border: none
+		//padding-left: $gutter - 4px
+		+font-smooth
+		&:hover
+			background: $bg-panel
+			span.toctree-expand
+				color: $menu-link-color
+		span.toctree-expand
+			@extend .fa
+			@extend .fa-angle-down
+			@extend %expand-icon
+
+	
+	%expand-icon
+		display: inline-block
+		font-size: 1.1em
+		line-height: inherit
+		color: inherit
+
+	// This is the on state for pages beyond second level
+
+	%hide_show_toctree_ul
+		> ul
+			display: none
+		&.current > ul
+			display: block
+
+	%shrink_toctree_element
+		font-size: .9rem
+
+	%toctree_link_color
+		color: $menu-link-color
+
+	%toctree_hover_link_color
+		color: $menu-link-medium
+
+	%display_current_toctree_element
+		display: block
+
+	@for $toc_level from 1 through 10
+		.toctree-l#{$toc_level}.current .toctree-l#{$toc_level + 1}
+			@extend %hide_show_toctree_ul
+
+		@if $toc_level > 1
+			li.toctree-l#{$toc_level}
+				> a
+					@extend %toctree_link_color
+					padding-left: $gutter * ((($toc_level - 1) * 0.4) + 1)
+				
+				a:hover span.toctree-expand
+					@extend %toctree_hover_link_color
+		@if $toc_level > 2 and $toc_level < 5
+			li.toctree-l#{$toc_level}
+				@extend %shrink_toctree_element
+
+	
+
+	li.current ul
+		display: block
+	li ul
+		margin-bottom: 0
+		display: none
+	li ul li a
+		margin-bottom: 0
+		color: $menu-link-color
+		font-weight: normal
+	a
+		line-height: 18px
+		padding: $space-nav $gutter
+		display: block
+		position: relative
+		color: $menu-link-color
+		&:hover
+			background-color: $bg-nav-hover
+			cursor: pointer
+			span.toctree-expand
+				color: $menu-link-color
+		&:active
+			background-color: $bg-nav-hover
+			cursor: pointer
+			
+
+.wy-side-nav-search
+	display: block
+	width: $nav-desktop-width
+	padding: $gutter $gutter 0 $gutter
+	margin: 0
+	z-index: $z-index-popover
+	background-color: $nav-search-background-color
+	text-align: left
+	color: $nav-search-color
+
+	input[type="text"] 
+		width: 100%
+		border: 1px solid $border
+		background-color: $bg !important
+		-webkit-appearance: none !important
+		padding: 0 1rem
+		line-height: 2.75rem
+		border-radius: $radius
+		box-shadow: none
+		font-size: inherit
+		color: $text
+
+	::placeholder 
+		color: $muted;
+	
+	:-ms-input-placeholder  
+		color: $muted;
+	
+	::-ms-input-placeholder 
+		color: $muted;
+
+	img
+		display: block
+		height: 3rem !important
+		padding: 0
+		
+	> a, .wy-dropdown > a
+		color: $nav-search-color
+		font-size: 100%
+		font-weight: bold
+		display: inline-block
+		padding: 0
+		margin-bottom: 4.55rem
+		+font-smooth
+		img.logo
+			display: block  // display on its own line all the time
+			margin: 0 auto
+			height: auto  // undo badge styling above
+			width: auto
+			border-radius: 0
+			max-width: 100%  // shrink on mobile, if appropriate
+			background: rgba(0,0,0,0)  // make hover background of parent show up properly
+		&.icon
+			img.logo
+				margin-top: 0.85em  // space it away from the title text
+	> div.version
+		margin-top: -1 * ($gutter / 4)
+		margin-bottom: $gutter / 2
+		font-weight: normal
+		color: $text
+
+	hr
+		margin: $space-m $gutter * -1
+
+.wy-nav .wy-menu-vertical
+	header
+		color: $link-color
+	a
+		color: $text-light
+		&:hover
+			background-color: $link-color
+			color: $bg

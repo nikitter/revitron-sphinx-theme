@@ -1,34 +1,38 @@
 .wy-breadcrumbs
-  +clearfix
+	+clearfix
 
 .wy-breadcrumbs li
-  display: inline-block
-  &.wy-breadcrumbs-aside
-    float: right
-  a
-    display: inline-block
-    padding: 5px
-    &:first-child
-      padding-left: 0
-  code
-    padding: 5px
-    border: none
-    background: none
-    &.literal
-      color: $text-color
+	display: inline-block
+	&.wy-breadcrumbs-aside
+		float: right
+	> a
+		display: inline-block
+		padding: 5px
+		color: $text
+		text-decoration: none !important
+		&:hover, &:active
+			color: $muted
+		&:first-child
+			padding-left: 0
+	code
+		padding: 5px
+		border: none
+		background: none
+		&.literal
+			color: $text
 .wy-breadcrumbs-extra
-  margin-bottom: 0
-  color: $text-light
-  font-size: 80%
-  display: inline-block
+	margin-bottom: 0
+	color: $text
+	font-size: 80%
+	display: inline-block
 
 
 +media($mobile)
-  .wy-breadcrumbs-extra
-    display: none
-  .wy-breadcrumbs li.wy-breadcrumbs-aside
-    display: none
+	.wy-breadcrumbs-extra
+		display: none
+	.wy-breadcrumbs li.wy-breadcrumbs-aside
+		display: none
 
 @media print
-  .wy-breadcrumbs li.wy-breadcrumbs-aside
-    display: none
+	.wy-breadcrumbs li.wy-breadcrumbs-aside
+		display: none

@@ -2,10 +2,57 @@
 // that are set in wyrm_core/wy_variables.sass. You'll find wyrm in bower_components if you're looking
 // for a reference.
 
+$bg:							#ffffff
+$text:							#181818
+$bg-code:						#fafafa
+$bg-panel:						#fafafa
+$bg-nav-hover:					#f4f4f4
+$border:						#e5e5e5
+$muted:							#bfbfbf
+$link:							$muted
+
+$radius: 4px
+
+$space: 1.25rem
+$space-xs: 0.5 * $space
+$space-s: 1 * $space
+$space-m: 2 * $space
+$space-l: 4 * $space
+$space-xl: 6 * $space
+$margin-rst: 1.5rem
+$gutter: 2.75em
+$hairline: 1px solid $border		
+$space-nav: 		0.4rem
+$base-font-size:	1rem
+$base-line-height:	1.5em
+
+$background-color: 				$bg
+$section-background-color: 		$bg
+$input-background-color:		$bg
+
+$text-color: 					$text
+$text-code-color:               $text
+$text-code-background-color:    $bg
+$text-code-border-color:        $bg
+
+
+
+
+$table-border-color: $border
+$table-stripe-color: $bg-panel
+
+$button-neutral-background-color: $bg
+
+
+
+
+
+
 $fa-font-path:                        "~font-awesome/fonts"
 $static-img:                          "../img/"
 
-$nav-content-width:                   800px
+$nav-desktop-width:					  20rem
+$nav-content-width:                   56rem
 $nav-media-query:                     (($nav-desktop-width) + ($nav-content-width))
 
 $mathjax-color:                       $text-color
@@ -13,24 +60,23 @@ $mathjax-color:                       $text-color
 $headerlink-color:                    $text-color
 
 // Code colors
-$text-viewcode-color:                 $green
+$text-viewcode-color:                 $text
 $text-codexref-color:                 $text-color
 
 // Definition list colors
-$class-color:                         $blue
-$method-color:                        $gray
+$class-color:                         $text
+$method-color:                        $text
 
-// GUI label color
-$guilabel-color:                      $blue
+
 
 // Footer colors
-$footer-color:                        $text-medium
+$footer-color:                        $muted
 
 // Menu colors
-$menu-vertical-background-color:      $section-background-color
+$menu-vertical-background-color:      $bg
 
 // Menu text colors
-$menu-color:                          $gray
+$menu-color:                          $green
 $menu-dark:                           lighten($menu-color,10%) !default
 $menu-medium:                         lighten($menu-color,27.5%) !default
 $menu-light:                          lighten($menu-color,45%) !default
@@ -44,26 +90,26 @@ $menu-link-light:                     $text-lighter
 $menu-link-active:                    $white
 
 // Navigation colors
-$nav-background-color:                $menu-background-color
-$nav-search-background-color:         $blue
+$nav-background-color:                $bg
+$nav-search-background-color:         $bg
 $nav-search-color:                    $section-background-color
 $nav-link-color:                      $blue
 $nav-link-color-visited:              $purple
 $nav-link-color-hover:                lighten($nav-link-color, 6%) !default
 $nav-link-color-alt:                  hsl(33, 100%, 51%)
-$nav-caption:                         lighten($blue, 15%)
+$nav-caption:                         $muted
 
 // Sidebar colors
-$sidebar-background-color:            $table-stripe-color
+$sidebar-background-color:            $bg
 $sidebar-border-color:                $table-border-color
-$sidebar-title-background-color:      $table-border-color
+$sidebar-title-background-color:      $bg
 
 // Sphinx highlight color
 $highlight-color:                     $yellow
 
-$base-font-family:                    "Lato", "proxima-nova", "Helvetica Neue", Arial, sans-serif
-$custom-font-family:                  "Roboto Slab", "ff-tisa-web-pro", "Georgia", Arial, sans-serif
+$base-font-family:                    'Inter', sans-serif
+$custom-font-family:                  'Inter', sans-serif
 $custom-font-family2:                 Georgia, serif
-$code-font-family:                    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace
+$code-font-family:                    'Fira Mono', monospace
 
 $font-display:                        block

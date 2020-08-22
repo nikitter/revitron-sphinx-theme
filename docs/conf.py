@@ -21,14 +21,14 @@ if is_development_build():
     sys.path.insert(0, os.path.abspath('..'))
 sys.path.append(os.path.abspath('./demo/'))
 
-import sphinx_rtd_theme
+import revitron_sphinx_theme
 from sphinx.locale import _
 
-project = u'Read the Docs Sphinx Theme'
+project = u'Revitron'
 slug = re.sub(r'\W+', '-', project.lower())
 version = '0.5.0'
 release = '0.5.0'
-author = u'Dave Snider, Read the Docs, Inc. & contributors'
+author = 'Marc Anton Dahmen'
 copyright = author
 language = 'en'
 
@@ -38,7 +38,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinxcontrib.httpdomain',
-    'sphinx_rtd_theme',
+    'revitron_sphinx_theme',
 ]
 
 templates_path = ['_templates']
@@ -49,7 +49,7 @@ gettext_compact = False
 
 master_doc = 'index'
 suppress_warnings = ['image.nonlocal_uri']
-pygments_style = 'default'
+
 
 intersphinx_mapping = {
     'rtd': ('https://docs.readthedocs.io/en/latest/', None),
@@ -73,7 +73,7 @@ if not 'READTHEDOCS' in os.environ:
         range(1, 100)
     ))
 
-html_logo = "demo/static/logo-wordmark-light.svg"
+html_logo = "demo/static/logo.svg"
 html_show_sourcelink = True
 
 htmlhelp_basename = slug

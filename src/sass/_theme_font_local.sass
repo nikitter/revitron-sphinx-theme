@@ -1,46 +1,153 @@
-$lato-font-path: "~lato-font/fonts";
-$roboto-font-path: "~roboto-fontface/fonts/roboto-slab";
-
-//  $font-full-path: '#{$roboto-font-path}/roboto-slab/Roboto-Slab';
+$inter-font-path: '~typeface-inter/Inter (web)'
+$fira-mono-font-path: '~typeface-fira-mono/files'
+	
+@font-face
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 100
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-Thin.woff2') format('woff2'), url('#{$inter-font-path}/Inter-Thin.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 100
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-ThinItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-ThinItalic.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 200
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-ExtraLight.woff2') format('woff2'), url('#{$inter-font-path}/Inter-ExtraLight.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 200
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-ExtraLightItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-ExtraLightItalic.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 300
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-Light.woff2') format('woff2'), url('#{$inter-font-path}/Inter-Light.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 300
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-LightItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-LightItalic.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 400
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-Regular.woff2') format('woff2'), url('#{$inter-font-path}/Inter-Regular.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 400
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-Italic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-Italic.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 500
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-Medium.woff2') format('woff2'), url('#{$inter-font-path}/Inter-Medium.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 500
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-MediumItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-MediumItalic.woff') format('woff')
+ 
 
 @font-face
-  font-family: 'Lato'
-  src: url('#{$lato-font-path}/lato-normal/lato-normal.woff2') format('woff2'), url('#{$lato-font-path}/lato-normal/lato-normal.woff') format('woff')
-  font-weight: 400
-  font-style: normal
-  font-display: $font-display
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 600
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-SemiBold.woff2') format('woff2'), url('#{$inter-font-path}/Inter-SemiBold.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 600
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-SemiBoldItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-SemiBoldItalic.woff') format('woff')
+ 
 
 @font-face
-  font-family: 'Lato'
-  src: url('#{$lato-font-path}/lato-bold/lato-bold.woff2') format('woff2'), url('#{$lato-font-path}/lato-bold/lato-bold.woff') format('woff')
-  font-weight: 700
-  font-style: normal
-  font-display: $font-display
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 700
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-Bold.woff2') format('woff2'), url('#{$inter-font-path}/Inter-Bold.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 700
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-BoldItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-BoldItalic.woff') format('woff')
+ 
 
 @font-face
-  font-family: 'Lato'
-  src: url('#{$lato-font-path}/lato-bold-italic/lato-bold-italic.woff2') format('woff2'), url('#{$lato-font-path}/lato-bold-italic/lato-bold-italic.woff') format('woff')
-  font-weight: 700
-  font-style: italic
-  font-display: $font-display
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 800
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-ExtraBold.woff2') format('woff2'), url('#{$inter-font-path}/Inter-ExtraBold.woff') format('woff')
+ 
+@font-face
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 800
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-ExtraBoldItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-ExtraBoldItalic.woff') format('woff')
+ 
 
 @font-face
-  font-family: 'Lato'
-  src: url('#{$lato-font-path}/lato-normal-italic/lato-normal-italic.woff2') format('woff2'), url('#{$lato-font-path}/lato-normal-italic/lato-normal-italic.woff') format('woff')
-  font-weight: 400
-  font-style: italic
-  font-display: $font-display
-
+	font-family: 'Inter'
+	font-style:  normal
+	font-weight: 900
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-Black.woff2') format('woff2'), url('#{$inter-font-path}/Inter-Black.woff') format('woff')
+ 
 @font-face
-  font-family: 'Roboto Slab'
-  font-style: normal
-  font-weight: 400
-  src: url('#{$roboto-font-path}/Roboto-Slab-Regular.woff2') format('woff2'), url('#{$roboto-font-path}/Roboto-Slab-Regular.woff') format('woff')
-  font-display: $font-display
-
+	font-family: 'Inter'
+	font-style:  italic
+	font-weight: 900
+	font-display: swap
+	src: url('#{$inter-font-path}/Inter-BlackItalic.woff2') format('woff2'), url('#{$inter-font-path}/Inter-BlackItalic.woff') format('woff')
+ 
 @font-face
-  font-family: 'Roboto Slab'
-  font-style: normal
-  font-weight: 700
-  src: url('#{$roboto-font-path}/Roboto-Slab-Bold.woff2') format('woff2'), url('#{$roboto-font-path}/Roboto-Slab-Bold.woff') format('woff')
-  font-display: $font-display
+	font-family: 'Fira Mono' 
+	font-style: normal 
+	font-display: swap 
+	font-weight: 400 
+	src: local('Fira Mono Regular '), local('Fira Mono-Regular'), url(' #{$fira-mono-font-path}/fira-mono-latin-400.woff2') format('woff2'), url(' #{$fira-mono-font-path}/fira-mono-latin-400.woff') format('woff')   
+
+@font-face 
+	font-family: 'Fira Mono' 
+	font-style: normal 
+	font-display: swap 
+	font-weight: 500 
+	src: local('Fira Mono Medium '), local('Fira Mono-Medium'), url(' #{$fira-mono-font-path}/fira-mono-latin-500.woff2') format('woff2'), url(' #{$fira-mono-font-path}/fira-mono-latin-500.woff') format('woff')   
+
+@font-face 
+	font-family: 'Fira Mono' 
+	font-style: normal 
+	font-display: swap 
+	font-weight: 700 
+	src: local('Fira Mono Bold '), local('Fira Mono-Bold'), url(' #{$fira-mono-font-path}/fira-mono-latin-700.woff2') format('woff2'), url(' #{$fira-mono-font-path}/fira-mono-latin-700.woff') format('woff')   
