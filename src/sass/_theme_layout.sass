@@ -73,9 +73,9 @@ body
 	background: $bg
 	color: $text
 	border-bottom: $hairline
-	padding: 0 $gutter / 1.75
+	padding: 0 $gutter / 2
 	position: relative
-	line-height: 3.8rem
+	line-height: 4rem
 	text-align: left
 	font-size: 100%
 	+clearfix
@@ -85,8 +85,8 @@ body
 		+font-smooth
 	img
 		float: right
-		height: 2.2rem
-		margin: 0.8rem 0
+		height: 2rem
+		margin: 1rem 0
 	i
 		font-size: 1rem
 		line-height: inherit
@@ -101,7 +101,7 @@ body
 	min-height: 100%
 
 .wy-nav-content
-	padding: $gutter $gutter
+	padding: $gutter
 	height: 100%
 	max-width: $nav-content-width
 	margin: auto
@@ -196,6 +196,7 @@ footer
 		margin-left: 0
 		.wy-nav-content
 			padding: $gutter
+			margin: 0 $gutter * -0.5
 		&.shift
 			position: fixed
 			min-width: 100%
