@@ -4,14 +4,16 @@
 
 $bg:							#ffffff
 $text:							#121212
-$bg-code:						#fafafa
-$bg-panel:						#fafafa
-$bg-nav-hover:					#f4f4f4
-$border:						#e5e5e5
+$bg-code:						#f6f6f6
+$bg-panel:						#f6f6f6
+$bg-nav-hover:					#f2f2f2
+$border:						#d4d4d4
 $muted:							#bfbfbf
 $link:							$muted
+						
+$border-search: 				rgba(0,0,0,0.25)
 
-$radius: 4px
+$radius: 0
 
 $space: 1.25rem
 $space-xs: 0.5 * $space
@@ -19,12 +21,13 @@ $space-s: 1 * $space
 $space-m: 2 * $space
 $space-l: 4 * $space
 $space-xl: 6 * $space
-$margin-rst: 1.5rem
-$gutter: 2.5em
+$margin-rst: 1.85rem
+$gutter: 3em
 $hairline: 1px solid $border		
-$space-nav: 		0.4rem
+$space-nav: 		0.4em
 $base-font-size:	1rem
 $base-line-height:	1.5em
+$header-weight:		720
 
 $background-color: 				$bg
 $section-background-color: 		$bg
@@ -35,18 +38,10 @@ $text-code-color:               $text
 $text-code-background-color:    $bg
 $text-code-border-color:        $bg
 
-
-
-
 $table-border-color: $border
 $table-stripe-color: $bg-panel
 
 $button-neutral-background-color: $bg
-
-
-
-
-
 
 $fa-font-path:                        "~font-awesome/fonts"
 $static-img:                          "../img/"
@@ -67,20 +62,11 @@ $text-codexref-color:                 $text-color
 $class-color:                         $text
 $method-color:                        $text
 
-
-
 // Footer colors
 $footer-color:                        $muted
 
 // Menu colors
 $menu-vertical-background-color:      $bg
-
-// Menu text colors
-$menu-color:                          $green
-$menu-dark:                           lighten($menu-color,10%) !default
-$menu-medium:                         lighten($menu-color,27.5%) !default
-$menu-light:                          lighten($menu-color,45%) !default
-$menu-lighter:                        lighten($menu-color,60%) !default
 
 // Menu link colors
 $menu-link-color:                     $text-color
@@ -90,13 +76,13 @@ $menu-link-light:                     $text-lighter
 $menu-link-active:                    $white
 
 // Navigation colors
-$nav-background-color:                $bg
-$nav-search-background-color:         $bg
-$nav-search-color:                    $section-background-color
-$nav-link-color:                      $blue
-$nav-link-color-visited:              $purple
-$nav-link-color-hover:                lighten($nav-link-color, 6%) !default
-$nav-link-color-alt:                  hsl(33, 100%, 51%)
+$nav-background-color:                $bg-panel
+$nav-search-background-color:         $bg-panel
+$nav-search-color:                    $text
+$nav-link-color:                      $text
+$nav-link-color-visited:              $text
+$nav-link-color-hover:                $muted
+$nav-link-color-alt:                  $muted
 $nav-caption:                         $muted
 
 // Sidebar colors
@@ -105,11 +91,11 @@ $sidebar-border-color:                $table-border-color
 $sidebar-title-background-color:      $bg
 
 // Sphinx highlight color
-$highlight-color:                     $yellow
+$highlight-color:                     #fff894
 
 $base-font-family:                    'Inter', sans-serif
 $custom-font-family:                  'Inter', sans-serif
-$custom-font-family2:                 Georgia, serif
+$custom-font-family2:                 'Inter', sans-serif
 $code-font-family:                    'Fira Mono', monospace
 
 $font-display:                        block

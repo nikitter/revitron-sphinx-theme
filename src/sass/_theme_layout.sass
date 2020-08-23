@@ -11,7 +11,7 @@ html
 
 body
 	background-color: $bg
-	font-weight: 400
+	font-weight: 450
 
 .wy-affix
 	position: fixed
@@ -50,7 +50,7 @@ body
 	top: 0
 	bottom: 0
 	left: 0
-	padding-bottom: 2em
+	
 	width: $nav-desktop-width
 	overflow-x: hidden
 	overflow-y: hidden
@@ -58,7 +58,7 @@ body
 	color: $text
 	background: $nav-background-color
 	z-index: $z-index-popover
-	border-right: $hairline
+	
 
 .wy-side-scroll
 	width: $nav-desktop-width + 1.5rem
@@ -66,14 +66,13 @@ body
 	overflow-x: hidden
 	overflow-y: scroll
 	height: 100%
-	padding-bottom: $space-l
 
 .wy-nav-top
 	display: none
-	background: $bg
-	color: $text
-	border-bottom: $hairline
+	background: $nav-search-background-color
+	color: $nav-search-color
 	padding: 0 $gutter / 2
+	border-bottom: $hairline
 	position: relative
 	line-height: 4rem
 	text-align: left
@@ -145,9 +144,9 @@ footer
 		line-height: 2.75rem
 		box-shadow: none
 		border-radius: $radius
-		border: 2px solid $text
+		border: 1px solid $border
 		&:hover 
-			border-color: $border
+			border-color: $text
 			background-color: $bg !important
 
 .rst-breadcrumbs-buttons
@@ -156,19 +155,15 @@ footer
 
 #search-results
 	.search li
-		margin-bottom: $base-line-height
-		border-bottom: solid 1px $table_border_color
-		padding-bottom: $base-line-height
-	.search li:first-child
-		border-top: solid 1px $table_border_color
-		padding-top: $base-line-height
+		margin-bottom: $margin-rst
 	.search li a
 		font-size: 120%
 		margin-bottom: $base-line-height / 2
 		display: inline-block
+		text-decoration: none
+		font-weight: 700
 	.context
-		color: $text-medium
-		font-size: 90%
+		color: $text
 
 .genindextable li > ul
 	margin-left: $base-line-height
@@ -184,7 +179,7 @@ footer
 		@else
 			right: -$nav-desktop-width
 		&.shift
-			width: 85%
+			width: $nav-desktop-width
 			left: 0
 	.wy-side-scroll
 		width: auto
@@ -200,7 +195,7 @@ footer
 		&.shift
 			position: fixed
 			min-width: 100%
-			left: 85%
+			left: $nav-desktop-width
 			top: 0
 			height: 100%
 			overflow: hidden

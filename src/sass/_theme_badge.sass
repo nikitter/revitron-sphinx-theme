@@ -8,42 +8,45 @@
 	border-top: $hairline
 	font-family: $base-font-family
 	z-index: $z-index-tray
+	line-height: 30px
+	box-shadow: 1px 0 0 $border
+	
 	a
-		color: $link_color
+		color: $text
 		text-decoration: none
 	.rst-badge-small
 		display: none
 	.rst-current-version
-		padding: $base-line-height / 2
+		padding: 0.4rem 0.7rem
 		background-color: $bg
 		display: block
 		text-align: right
-		font-size: 90%
+		font-size: 0.9rem
 		cursor: pointer
 		color: $text
+		line-height: 30px
 		+clearfix
 		.fa
 			color: $text
 		.fa-book
-			float: left
-		.icon-book
+			padding-top: inherit
+			font-size: 0.9rem
 			float: left
 		&.rst-out-of-date
-			background-color: $red
-			color: $white
+			background-color: $muted
+			color: $bg
 		&.rst-active-old-version
-			background-color: $yellow
-			color: $black
+			background-color: $muted
+			color: $text
 	&.shift-up
 		height: auto
 		max-height: 100%
-		overflow-y: scroll
 	&.shift-up .rst-other-versions
 		display: block
 	.rst-other-versions
-		font-size: 90%
-		padding: $space-nav
-		color: $text-medium
+		font-size: 0.9rem
+		padding: 0.4rem 0.7rem
+		color: $muted
 		display: none
 		hr
 			display: block
@@ -52,33 +55,29 @@
 			margin: 20px 0
 			padding: 0
 			border-top: $hairline
-			//border-right: $hairline
 		dd
 			display: inline-block
 			margin: 0
 			a
 				display: inline-block
 				padding: $base-line-height / 4
+				line-height: 1.5
 				color: $text
 	&.rst-badge
-		width: auto
+		width: $nav-desktop-width
 		bottom: 20px
 		right: 20px
 		left: auto
 		border: none
 		max-width: $nav-desktop-width
 		max-height: 90%
-		.icon-book
-			float: none
-			line-height: 30px
+		line-height: 30px
 		.fa-book
 			float: none
 			line-height: 30px
 		&.shift-up .rst-current-version
 			text-align: right
 			.fa-book
-				float: left
-			.icon-book
 				float: left
 		> .rst-current-version
 			width: auto
@@ -90,7 +89,6 @@
 
 +media($tablet)
 	.rst-versions
-		width: 85%
 		display: none
 		&.shift
 			display: block

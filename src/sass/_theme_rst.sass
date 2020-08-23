@@ -17,43 +17,44 @@
 	h1
 		font-size: 2.5rem
 		line-height: 1
-		letter-spacing: -0.08rem
-		margin-top: $space-l
+		letter-spacing: -0.02em
+		margin-top: 4.2rem
 		margin-bottom: $space-m
-		font-weight: 700
+		font-weight: $header-weight
 
 	h2
-		font-size: 2rem
+		font-size: 1.8rem
 		line-height: 1.15
-		letter-spacing: -0.07rem
+		letter-spacing: -0.02em
 		margin-top: $space-m
 		margin-bottom: $space-s
-		font-weight: 700
+		font-weight: $header-weight
 
 	h3
-		font-size: 1.75rem
+		font-size: 1.5rem
 		line-height: 1.3
+		letter-spacing: -0.02em
 		margin-top: $space-m
 		margin-bottom: $space-s
-		font-weight: 700
+		font-weight: $header-weight
 
 	h4
-		font-size: 1.5rem
+		font-size: 1.3rem
 		line-height: 1.4
+		letter-spacing: -0.02em
 		margin-top: $space-s
 		margin-bottom: $space-xs
-		font-weight: 700
+		font-weight: $header-weight
 
 	h5
-		font-size: 1.25rem
+		font-size: 1.15rem
 		line-height: 1.5
 		margin-top: $space-s
 		margin-bottom: $space-xs
-		font-weight: 700
-
+		font-weight: $header-weight
 
 	hr
-		margin: $gutter $gutter * -1
+		margin: $space-s $gutter * -1
 
 	li a, p a, dt a 
 		color: inherit
@@ -132,6 +133,7 @@
 		font-family: $code-font-family
 		user-select: none
 		pointer-events: none
+		color: $muted
 	div[class^='highlight'] pre
 		white-space: pre
 		margin: 0
@@ -166,7 +168,6 @@
 
 	// These are the various note pullouts that sphinx applies
 	//.note, .attention, .caution, .danger, .error, .hint, .important, .tip, .warning, .seealso, .admonition-todo, .admonition
-		
 	.admonition
 		margin: $margin-rst 0
 		padding: $space-s
@@ -178,10 +179,9 @@
 
 	.admonition-title
 		display: block
-		margin: 0 0 $margin-rst 0
+		margin: 0 0 $space-s 0
 		font-weight: 700
 		color: $text
-		
 		@extend .fa
 		@extend .fa-lightbulb-o
 		&:before
@@ -295,7 +295,7 @@
 		margin: 0 0 $margin-rst $margin-rst
 		padding: $margin-rst
 		background: $sidebar-background-color
-		border: solid 1px $sidebar-border-color
+		border: solid 1px $border
 		// Sidebar content is usually less relevant, so adjust the margins and sizes.
 		p, ul, dl
 			font-size: 90%
@@ -305,15 +305,15 @@
 			display: block
 			font-family: $custom-font-family
 			font-weight: bold
-			background: $table-border-color
+			background: $bg-panel
 			padding: $margin-rst / 4 $margin-rst / 2
 			margin: -$margin-rst
 			margin-bottom: $margin-rst
 			font-size: 100%
 	// Sphinx can highlight searched text with ?highlighted=searchterm
 	.highlighted
-		background: $highlight-color
-		box-shadow: 0 0 0 $margin-rst / 12 $highlight-color
+		background: $highlight-color !important
+		box-shadow: 0 0 0 1px $highlight-color
 		display: inline
 		font-weight: bold
 
@@ -413,8 +413,6 @@
 				line-height: $base-line-height
 				margin-bottom: 0rem
 				font-size: .9rem
-		//&:not(.field-list)
-			//@extend .wy-table-striped
 		// Remove bottom margin for the last element (and it's last child)
 		td .last, td .last > *:last-child
 			margin-bottom: 0
@@ -475,16 +473,18 @@
 			display: table
 			margin: $margin-rst / 4 0
 			font-size: 1rem
-			line-height: normal
+			line-height: 1.4
 			background: $bg-code
 			color: $class-color
-			border-top: solid 2px $border
-			padding: $space-xs * 0.8 $space-xs
+			border-top: solid 2px $text
+			padding: $space-xs $space-xs * 1.2
 			position: relative
-			
+			em.property
+				display: inline !important
 			.headerlink
 				color: $text-color
 				font-size: 100% !important
+	
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
 		dl:not(.field-list) > dt
@@ -503,6 +503,7 @@
 		tt, code
 			font-weight: bold
 			&.descname, &.descclassname
+				color: inherit
 				background-color: transparent
 				border: none
 				padding: 0

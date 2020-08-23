@@ -2,10 +2,11 @@
 	a:hover
 		text-decoration: none
 	
-
 .wy-menu-vertical
 	width: $nav-desktop-width
-	margin-top: $space-nav * -1
+	padding-top: $space-m
+	padding-bottom: $space-l
+	border-right: $hairline
 
 	header, p.caption
 		color: $nav-caption
@@ -16,7 +17,6 @@
 		
 	& > :first-child
 		margin-top: 0 !important
-	
 		
 	li
 		&.divide-top
@@ -25,16 +25,12 @@
 			border-bottom: $border
 		&.current
 			color: $text
-			//background: $bg
 			a
 				color: $menu-link-color
-				border-right: solid 1px border
 				padding: $space-nav $gutter * 1.5
 				&:hover
-					background: $bg-nav-hover
-		&.toctree-l1.current
-			//border-right: 4px solid $text
-			//background-color: $bg-panel
+					background: $bg-nav-hover !important
+		
 		code
 			border: none
 			background: inherit
@@ -51,21 +47,21 @@
 
 		a.reference
 			line-height: $base-line-height
+			border-top: 1px solid transparent !important
+			border-bottom: 1px solid transparent !important
 		a.reference.current, a.reference.current:hover
 			color: $text
-			background-color: $bg-panel
-			border-right: 4px solid
+			background-color: $bg !important
+			box-shadow: 1px 0 0 #ffffff
+			border-color: $border  !important
 		
-
 	// On state for the first level
 	li.on a, li.current > a
 		color: $menu-link-color
 		padding: $space-nav $gutter
 		font-weight: inherit
 		position: relative
-		//background: $menu-vertical-background-color
 		border: none
-		//padding-left: $gutter - 4px
 		+font-smooth
 		&:hover
 			background: $bg-panel
@@ -76,7 +72,6 @@
 			@extend .fa-angle-down
 			@extend %expand-icon
 
-	
 	%expand-icon
 		display: inline-block
 		font-size: 1.1em
@@ -84,7 +79,6 @@
 		color: inherit
 
 	// This is the on state for pages beyond second level
-
 	%hide_show_toctree_ul
 		> ul
 			display: none
@@ -111,15 +105,13 @@
 			li.toctree-l#{$toc_level}
 				> a
 					@extend %toctree_link_color
-					padding-left: $gutter * ((($toc_level - 1) * 0.9) + 1)
+					padding-left: $gutter * ((($toc_level - 1) * 0.5) + 1)
 				
 				a:hover span.toctree-expand
 					@extend %toctree_hover_link_color
 		@if $toc_level > 2 and $toc_level < 5
 			li.toctree-l#{$toc_level}
 				@extend %shrink_toctree_element
-
-	
 
 	li.current ul
 		display: block
@@ -149,37 +141,41 @@
 .wy-side-nav-search
 	display: block
 	width: $nav-desktop-width
+	box-sizing: border-box
 	padding: $gutter $gutter 0 $gutter
-	margin: 0
+	margin: 0 !important
 	z-index: $z-index-popover
 	background-color: $nav-search-background-color
 	text-align: left
 	color: $nav-search-color
+	border-right: $hairline 
 
 	input[type="text"] 
 		width: 100%
-		border: 1px solid $border
-		background-color: $bg !important
+		border: 1px dashed $border-search
+		background-color: rgba(0,0,0,0.025) !important
 		-webkit-appearance: none !important
-		padding: 0 1rem
-		line-height: 2.75rem
+		padding: 0 0.75rem
+		line-height: 2.25rem
 		border-radius: $radius
 		box-shadow: none
 		font-size: inherit
-		color: $text
+		color: $nav-search-color
+		&:focus
+			border-color: $nav-search-color
 
 	::placeholder 
-		color: $muted;
+		color: $border-search;
 	
 	:-ms-input-placeholder  
-		color: $muted;
+		color: $border-search;
 	
 	::-ms-input-placeholder 
-		color: $muted;
+		color: $border-search;
 
 	img
 		display: block
-		height: 3rem !important
+		height: 4.25rem !important
 		padding: 0
 		
 	> a, .wy-dropdown > a
@@ -188,7 +184,7 @@
 		font-weight: bold
 		display: inline-block
 		padding: 0
-		margin-bottom: 4.25rem
+		margin-bottom: 3.75rem
 		+font-smooth
 		img.logo
 			display: block  // display on its own line all the time
@@ -205,7 +201,7 @@
 		margin-top: -1 * ($gutter / 4)
 		margin-bottom: $gutter / 2
 		font-weight: normal
-		color: $text
+		color: $nav-search-color
 
 	hr
 		margin: $space-m $gutter * -1
