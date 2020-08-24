@@ -98,7 +98,7 @@ setup(
         'build_py': WebpackBuildCommand,
         'watch': WebpackDevelopCommand,
     },
-    zip_safe=False,
+    zip_safe=True,
     packages=['revitron_sphinx_theme'],
     package_data={'revitron_sphinx_theme': [
         'theme.conf',
