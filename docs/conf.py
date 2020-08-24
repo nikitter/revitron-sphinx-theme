@@ -38,7 +38,7 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinxcontrib.httpdomain',
-    'revitron_sphinx_theme',
+    'revitron_sphinx_theme'
 ]
 
 templates_path = ['_templates']
@@ -55,13 +55,15 @@ intersphinx_mapping = {
     'sphinx': ('http://www.sphinx-doc.org/en/stable/', None),
 }
 
-html_theme = 'sphinx_rtd_theme'
+html_theme = 'revitron_sphinx_theme'
 html_theme_options = {
     'logo_only': True,
-    'navigation_depth': 5,
+    'navigation_depth': 5
 }
 
-html_context = {}
+html_context = {
+	'github_url': 'https://github.com/revitron/revitron'
+}
 
 if not 'READTHEDOCS' in os.environ:
     html_static_path = ['_static/']
@@ -73,7 +75,7 @@ if not 'READTHEDOCS' in os.environ:
         range(1, 100)
     ))
 
-html_logo = "demo/static/logo.svg"
+html_logo = "demo/static/revitron.svg"
 html_show_sourcelink = True
 
 htmlhelp_basename = slug
