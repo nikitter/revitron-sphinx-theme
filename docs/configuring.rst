@@ -23,7 +23,7 @@ For example:
         'includehidden': True,
         'titles_only': False,
         'opengraph_image': 'static/logo.svg',
-        'opengraph_url': 'https://domain.com',
+        'base_url': 'https://domain.com',
         'github_url': ''
     }
 

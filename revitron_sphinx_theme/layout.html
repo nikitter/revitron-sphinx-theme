@@ -21,11 +21,11 @@
 
 	<meta property="og:title" content="{{ title|striptags|e }}" />
 	<meta property="og:type" content="website" />
-	{% if theme_opengraph_url %}
-		<meta property="og:url" content="{{ theme_opengraph_url }}{{ pathto('/' + pagename, 1) }}.html" />
+	{% if theme_base_url %}
+		<meta property="og:url" content="{{ theme_base_url }}{{ pathto('/' + pagename, 1) }}.html" />
 	{% endif %}
 	{% if theme_opengraph_image %}
-		<meta property="og:image" content="{{ pathto('_static/' + theme_opengraph_image, 1) }}" />
+		<meta property="og:image" content="{{ theme_base_url }}{{ pathto('/_static/' + theme_opengraph_image, 1) }}" />
 	{% endif %}
 
 	{# CSS #}

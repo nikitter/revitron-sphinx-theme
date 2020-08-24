@@ -54,7 +54,7 @@ This theme is highly customizable on both the page level and on a global level.
         'includehidden': True,
         'titles_only': False,
         'opengraph_image': 'logo.svg',
-        'opengraph_url': 'https://domain.com',
+        'base_url': 'https://domain.com',
         'github_url': ''
     }
 
