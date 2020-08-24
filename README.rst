@@ -5,7 +5,7 @@ Revitron Sphinx Theme
 This Sphinx_ theme is a fork of the original `Read the Docs`_ theme
 that was designed to provide a great reader experience for
 documentation users on both desktop and mobile devices. You can find
-a working demo of the theme in the `Revitron documentation`_
+a working demo of the theme in the `Revitron documentation`_.
 
 .. _Sphinx: http://www.sphinx-doc.org
 .. _Read the Docs: https://github.com/readthedocs/sphinx_rtd_theme
@@ -47,6 +47,6 @@ Contributing
 ============
 
 If you would like to help modify or translate the theme, you'll find more
-information on contributing in `contributing guide`_ of the original theme.
+information on contributing in the `contributing guide`_ of the original theme.
 
 .. _contributing guide: https://sphinx-rtd-theme.readthedocs.io/en/latest/contributing.html
