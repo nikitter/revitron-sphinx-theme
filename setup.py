@@ -84,7 +84,7 @@ class TransifexCommand(distutils.cmd.Command):
 
 
 setup(
-    name='revitron-sphinx-theme',
+    name='revitron_sphinx_theme',
     version='0.5.0',
     url='https://github.com/revitron/revitron-sphinx-theme/',
     license='MIT',
