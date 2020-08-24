@@ -16,18 +16,18 @@ For example:
         'canonical_url': '',
         'analytics_id': 'UA-XXXXXXX-1',  #  Provided by Google in your dashboard
         'logo_only': False,
-        'prev_next_buttons_location': 'bottom',
         'style_external_links': False,
-        'style_nav_header_background': 'white',
         'collapse_navigation': True,
         'sticky_navigation': True,
         'navigation_depth': 4,
         'includehidden': True,
         'titles_only': False,
-		'opengraph_image': '',
-		'opengraph_url': '',
-		'github_url': ''
+        'opengraph_image': 'static/logo.svg',
+        'opengraph_url': 'https://domain.com',
+        'github_url': ''
     }
+
+    html_logo = "demo/static/logo.svg"
 
 Table of contents options
 -------------------------
