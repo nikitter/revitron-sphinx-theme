@@ -20,7 +20,7 @@ This theme can be installed with ``pip``:
 
 .. code:: console
 
-   $ pip install https://github.com/revitron/revitron-sphinx-theme/tarball/master
+   $ pip install https://github.com/revitron/revitron-sphinx-theme/archive/master.zip
 
 To use the theme in your Sphinx project, you will need to add the following to
 your ``conf.py`` file:
