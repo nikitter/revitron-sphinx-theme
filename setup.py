@@ -104,7 +104,7 @@ setup(
         'theme.conf',
         '*.html',
         'static/css/*.css',
-        'static/css/fonts/*.*'
+        'static/css/fonts/*.*',
         'static/js/*.js',
     ]},
     include_package_data=True,
