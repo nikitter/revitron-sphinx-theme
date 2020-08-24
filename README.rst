@@ -11,6 +11,8 @@ a working demo of the theme in the `Revitron documentation`_.
 .. _Read the Docs: https://github.com/readthedocs/sphinx_rtd_theme
 .. _Revitron documentation: https://revitron.readthedocs.io/en/latest/
 
+.. image :: mockup.jpg
+
 Installation
 ============
 
