@@ -20,7 +20,7 @@ class WebpackBuildCommand(setuptools.command.build_py.build_py):
     def run(self):
         if not 'CI' in os.environ and not 'TOX_ENV_NAME' in os.environ:
             subprocess.run(['npm', 'install'], check=True)
-            subprocess.run(['node_modules/.bin/webpack', '--config', 'webpack.prod.js'], check=True)
+            subprocess.run(['node node_modules/.bin/webpack', '--config', 'webpack.prod.js'], check=True)
         setuptools.command.build_py.build_py.run(self)
 
 
@@ -38,7 +38,7 @@ class WebpackDevelopCommand(distutils.cmd.Command):
 
     def run(self):
         subprocess.run(
-            ["node_modules/.bin/webpack-dev-server", "--open", "--config", "webpack.dev.js"],
+            ["node node_modules/.bin/webpack-dev-server", "--open", "--config", "webpack.dev.js"],
             check=True
         )
 
