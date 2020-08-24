@@ -100,7 +100,7 @@ body
 	min-height: 100%
 
 .wy-nav-content
-	padding: 2.25rem  $gutter $gutter $gutter
+	padding: 1.75rem  $gutter $gutter $gutter
 	height: 100%
 	max-width: $nav-content-width
 	margin: auto
@@ -178,7 +178,7 @@ footer
 .genindextable li > ul
 	margin-left: $base-line-height
 
-+media($tablet)
+@media screen and (max-width: $nav-media-query * 0.85)
 	.wy-body-for-nav
 		background: $section-background-color
 	.wy-nav-top
@@ -200,8 +200,7 @@ footer
 	.wy-nav-content-wrap
 		margin-left: 0
 		.wy-nav-content
-			padding: $gutter
-			margin: 0 $gutter * -0.5
+			padding: $gutter $gutter * 0.5
 		&.shift
 			position: fixed
 			min-width: 100%
