@@ -9,7 +9,7 @@ from os import path
 import sphinx
 
 
-__version__ = '0.5.0'
+__version__ = '0.6.0'
 __version_full__ = __version__
 
 
@@ -23,7 +23,7 @@ def get_html_theme_path():
 def setup(app):
     if sphinx.version_info >= (1, 6, 0):
         # Register the theme that can be referenced without adding a theme path
-        app.add_html_theme('sphinx_rtd_theme', path.abspath(path.dirname(__file__)))
+        app.add_html_theme('revitron_sphinx_theme', path.abspath(path.dirname(__file__)))
 
     if sphinx.version_info >= (1, 8, 0):
         # Add Sphinx message catalog for newer versions of Sphinx
