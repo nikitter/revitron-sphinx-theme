@@ -14,23 +14,16 @@
 		padding: $space-nav $gutter
 		margin: $space-s 0 0 0
 		display: block
-		
+		font-weight: bold
 	& > :first-child
 		margin-top: 0 !important
 		
 	li
-		&.divide-top
-			border-top: $border
-		&.divide-bottom
-			border-bottom: $border
-		&.current
-			color: $text
-			a
-				color: $menu-link-color
-				padding: $space-nav $gutter * 1.5
-				&:hover
-					background: $bg-nav-hover !important
 		
+		a
+			color: $nav-color
+			&:hover
+				background: $bg-nav-hover !important
 		code
 			border: none
 			background: inherit
@@ -47,26 +40,27 @@
 
 		a.reference
 			line-height: $base-line-height
-			border-top: 1px solid transparent !important
-			border-bottom: 1px solid transparent !important
+			//border-top: 1px solid transparent !important
+			//border-bottom: 1px solid transparent !important
 		a.reference.current, a.reference.current:hover
-			color: $text
-			background-color: $bg !important
-			box-shadow: 1px 0 0 #ffffff
-			border-color: $border  !important
+			color: $nav-color
+			background-color: $bg-nav-current !important
+			box-shadow: 1px 0 0 $text
+			border-right: 2px solid
+			//border-color: $border  !important
 		
 	// On state for the first level
 	li.on a, li.current > a
-		color: $menu-link-color
+		color: $nav-color
 		padding: $space-nav $gutter
 		font-weight: inherit
 		position: relative
 		border: none
 		+font-smooth
 		&:hover
-			background: $bg-panel
+			background: $bg-nav-hover
 			span.toctree-expand
-				color: $menu-link-color
+				color: $nav-color
 		span.toctree-expand
 			@extend .fa
 			@extend .fa-angle-down
@@ -89,10 +83,10 @@
 		font-size: .9rem
 
 	%toctree_link_color
-		color: $menu-link-color
+		color: $nav-color
 
 	%toctree_hover_link_color
-		color: $menu-link-medium
+		color: $nav-color
 
 	%display_current_toctree_element
 		display: block
@@ -120,19 +114,19 @@
 		display: none
 	li ul li a
 		margin-bottom: 0
-		color: $menu-link-color
+		color: $nav-color
 		font-weight: normal
 	a
 		line-height: 18px
 		padding: $space-nav $gutter
 		display: block
 		position: relative
-		color: $menu-link-color
+		color: $nav-color
 		&:hover
 			background-color: $bg-nav-hover
 			cursor: pointer
 			span.toctree-expand
-				color: $menu-link-color
+				color: $nav-color
 		&:active
 			background-color: $bg-nav-hover
 			cursor: pointer
@@ -152,8 +146,8 @@
 
 	input[type="text"] 
 		width: 100%
-		border: 1px dashed $border-search
-		background-color: rgba(0,0,0,0.025) !important
+		border: 1px solid $border-search
+		background-color: rgba(255,255,255,0.4) !important
 		-webkit-appearance: none !important
 		padding: 0 0.75rem
 		line-height: 2.25rem
@@ -165,13 +159,13 @@
 			border-color: $nav-search-color
 
 	::placeholder 
-		color: $border-search;
+		color: $muted;
 	
 	:-ms-input-placeholder  
-		color: $border-search;
+		color: $muted;
 	
 	::-ms-input-placeholder 
-		color: $border-search;
+		color: $muted;
 
 	img
 		display: block

@@ -17,10 +17,10 @@
 	h1
 		font-size: 2.5rem
 		line-height: 1
-		letter-spacing: -0.02em
+		letter-spacing: -0.03em
 		margin-top: 4.2rem
 		margin-bottom: $space-m
-		font-weight: $header-weight
+		font-weight: 340
 
 	h2
 		font-size: 1.8rem
@@ -28,7 +28,7 @@
 		letter-spacing: -0.02em
 		margin-top: $space-m
 		margin-bottom: $space-s
-		font-weight: $header-weight
+		font-weight: 350
 
 	h3
 		font-size: 1.5rem
@@ -36,7 +36,7 @@
 		letter-spacing: -0.02em
 		margin-top: $space-m
 		margin-bottom: $space-s
-		font-weight: $header-weight
+		font-weight: 380
 
 	h4
 		font-size: 1.3rem
@@ -44,17 +44,18 @@
 		letter-spacing: -0.02em
 		margin-top: $space-s
 		margin-bottom: $space-xs
-		font-weight: $header-weight
+		font-weight: 380
 
 	h5
 		font-size: 1.15rem
 		line-height: 1.5
 		margin-top: $space-s
 		margin-bottom: $space-xs
-		font-weight: $header-weight
+		font-weight: 420
 
 	hr
-		margin: $space-s $gutter * -1
+		margin: $space-m 0
+		border-top: $hairline
 
 	li a, p a, dt a 
 		color: inherit
@@ -94,7 +95,7 @@
 	// Style external links
 	&.style-external-links a.reference.external:after
 		font-family: FontAwesome
-		content: "\f08e"
+		content: '\f08e'
 		color: $text-light
 		vertical-align: super
 		font-size: 60%
@@ -180,28 +181,29 @@
 	.admonition-title
 		display: block
 		margin: 0 0 $space-s 0
-		font-weight: 700
+		font-weight: 450
 		color: $text
 		@extend .fa
 		@extend .fa-lightbulb-o
 		&:before
 			margin-right: 0.5rem
 
-	@mixin alert($icon)
+	@mixin alert($icon, $color: inherit)
+		border-color: $color
 		.admonition-title
 			@extend #{$icon}
 
 	.note, .seealso
-		@include alert(".fa-lightbulb-o")
+		@include alert('.fa-lightbulb-o')
 
 	.hint, .tip, .important
-		@include alert(".fa-check")
+		@include alert('.fa-lightbulb-o')
 
 	.error, .danger
-		@include alert(".fa-fire")
+		@include alert('.fa-fire', #ff4128)
 
 	.warning, .caution, .attention, .admonition-todo
-		@include alert(".fa-lightbulb-o")
+		@include alert('.fa-lightbulb-o', #ffb71d)
 
 	// Some people put tables in notes. Let's give them very basic support.
 	.admonition table
@@ -274,12 +276,13 @@
 			font-size: 1rem
 			@extend .fa
 			&:after
-				content: "\f0c1"
+				content: '\f0c1'
 				font-family: FontAwesome
 				
 		&:hover .headerlink:after
 			visibility: visible
 			color: $muted !important
+			text-decoration: none
 
 	table > caption .headerlink:after
 		font-size: 12px
@@ -349,17 +352,24 @@
 	html.writer-html5 &
 		dl dt span.classifier
 			&:before
-				content: " : "
+				content: ' : '
 		dl.footnote,
 		dl.field-list
 			display: grid
 			grid-template-columns: max-content auto
+			align-items: center;
+			margin: 1rem 0
 			> dt
-				padding-left: 1rem
+				padding-right: 1rem
 				&:after
-					content: ":"
+					content: ':'
 			> dt, > dd
-				margin-bottom: 0rem
+				margin: 0
+				padding: 0.35rem 0.75rem 0.35rem 0
+				> p
+					margin: 0
+				code 
+					padding: 0
 		dl.footnote
 			font-size: .9rem
 			> dt
@@ -370,13 +380,13 @@
 				> span.brackets
 					margin-right: .5rem
 					&:before
-						content: "["
+						content: '['
 					&:after
-						content: "]"
+						content: ']'
 				> span.fn-backref
 					font-style: italic
 			> dd
-				margin: 0rem 0rem .5rem 0rem
+				margin: 0rem 0rem $margin-rst 0rem
 				line-height: 1.2rem
 				p
 					font-size: .9rem
@@ -476,14 +486,15 @@
 			line-height: 1.4
 			background: $bg-code
 			color: $class-color
-			border-top: solid 2px $text
+			border-top: solid 2px $border
 			padding: $space-xs $space-xs * 1.2
 			position: relative
 			em.property
 				display: inline !important
 			.headerlink
-				color: $text-color
+				color: $headerlink-color
 				font-size: 100% !important
+				text-decoration: none !important
 	
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list

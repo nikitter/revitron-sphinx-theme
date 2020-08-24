@@ -1,5 +1,8 @@
 .wy-breadcrumbs
 	+clearfix
+	& + hr 
+		margin-top: $space-s !important
+		margin-bottom: $space-s !important
 
 .wy-breadcrumbs li
 	display: inline-block
@@ -11,7 +14,7 @@
 		color: $text
 		text-decoration: none !important
 		&:hover, &:active
-			color: $muted
+			color: $muted !important
 		&:first-child
 			padding-left: 0
 	code
@@ -20,16 +23,18 @@
 		background: none
 		&.literal
 			color: $text
+
 .wy-breadcrumbs-extra
 	margin-bottom: 0
 	color: $text
 	font-size: 80%
 	display: inline-block
 
+.wy-breadcrumbs-aside
+	.fa 
+		font-size: 1.4rem
 
 +media($mobile)
-	[aria-label="breadcrumbs navigation"] 
-		display: none
 	.wy-breadcrumbs-extra
 		display: none
 	.wy-breadcrumbs li.wy-breadcrumbs-aside

@@ -4,14 +4,14 @@
 
 $bg:							#ffffff
 $text:							#121212
-$bg-code:						#f6f6f6
-$bg-panel:						#f6f6f6
-$bg-nav-hover:					#f2f2f2
-$border:						#d4d4d4
-$muted:							#bfbfbf
+$bg-code:						#f8f8f8
+$bg-panel:						$bg-code
+
+$border:						#dfdfdf
+$muted:							#b6b6b6
 $link:							$muted
 						
-$border-search: 				rgba(0,0,0,0.25)
+$border-search: 				rgba(0,0,0,0.2)
 
 $radius: 0
 
@@ -26,8 +26,7 @@ $gutter: 3em
 $hairline: 1px solid $border		
 $space-nav: 		0.4em
 $base-font-size:	1rem
-$base-line-height:	1.5em
-$header-weight:		720
+$base-line-height:	1.6em
 
 $background-color: 				$bg
 $section-background-color: 		$bg
@@ -46,8 +45,8 @@ $button-neutral-background-color: $bg
 $fa-font-path:                        "~font-awesome/fonts"
 $static-img:                          "../img/"
 
-$nav-desktop-width:					  20rem
-$nav-content-width:                   56rem
+$nav-desktop-width:					  23rem
+$nav-content-width:                   58rem
 $nav-media-query:                     (($nav-desktop-width) + ($nav-content-width))
 
 $mathjax-color:                       $text-color
@@ -68,22 +67,14 @@ $footer-color:                        $muted
 // Menu colors
 $menu-vertical-background-color:      $bg
 
-// Menu link colors
-$menu-link-color:                     $text-color
-$menu-link-dark:                      $text-dark
-$menu-link-medium:                    $text-medium
-$menu-link-light:                     $text-lighter
-$menu-link-active:                    $white
-
 // Navigation colors
-$nav-background-color:                $bg-panel
-$nav-search-background-color:         $bg-panel
+$nav-background-color:                $bg-code
+$bg-nav-hover:						  #f0f0f0
+$bg-nav-current:					  $bg-nav-hover
+$nav-color:							  $text
+$nav-caption:						  $text
+$nav-search-background-color:         $nav-background-color
 $nav-search-color:                    $text
-$nav-link-color:                      $text
-$nav-link-color-visited:              $text
-$nav-link-color-hover:                $muted
-$nav-link-color-alt:                  $muted
-$nav-caption:                         $muted
 
 // Sidebar colors
 $sidebar-background-color:            $bg
