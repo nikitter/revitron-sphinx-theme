@@ -25,23 +25,39 @@ your ``conf.py`` file:
 
 .. code:: python
 
-    import revitron_sphinx_theme
+	import revitron_sphinx_theme
 
-    extensions = [
-        ...
-        "revitron_sphinx_theme",
-    ]
+	extensions = [
+		...
+		"revitron_sphinx_theme",
+	]
 
-    html_theme = "revitron_sphinx_theme"
+	html_theme = "revitron_sphinx_theme"
 
 Configuration
 =============
 
 This theme is highly customizable on both the page level and on a global level.
-To see all the possible configuration options, read the documentation for the original theme on
-`configuring the theme`_.
 
-.. _configuring the theme: https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html
+.. code:: python
+
+	html_theme_options = {
+		'canonical_url': '',
+		'analytics_id': 'UA-XXXXXXX-1', 
+		'logo_only': False,
+		'style_external_links': False,
+		'collapse_navigation': True,
+		'sticky_navigation': True,
+		'navigation_depth': 4,
+		'includehidden': True,
+		'titles_only': False,
+		'opengraph_image': 'logo.svg',
+		'opengraph_url': 'https://domain.com',
+		'github_url': ''
+	}
+
+	html_logo = "demo/static/logo.svg"
+
 
 Contributing
 ============
