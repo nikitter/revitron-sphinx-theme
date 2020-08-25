@@ -31,6 +31,7 @@
       </span>
     {%- elif commit %}
       <span class="commit">
+	  	&mdash;
         {# Translators: the phrase "revision" comes from Git, referring to a commit #}
         {% trans %}Revision{% endtrans %} <code>{{ commit }}</code>.
       </span>
@@ -38,7 +39,7 @@
     
 
 	{%- if show_sphinx %}
-	  &mdash;
+	  <br>
       {% set sphinx_web = '<a href="https://www.sphinx-doc.org/">Sphinx</a>' %}
       {% set readthedocs_web = '<a href="https://github.com/revitron">Revitron</a>' %}
       {# Translators: the variable "sphinx_web" is a link to the Sphinx project documentation with the text "Sphinx" #}
