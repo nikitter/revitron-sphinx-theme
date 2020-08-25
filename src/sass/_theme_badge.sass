@@ -1,8 +1,9 @@
-.rst-versions
+.rst-versions, .rst-versions.rst-badge
 	position: fixed
-	bottom: 0
-	left: 0
+	bottom: 0 !important
+	left: 0 !important
 	width: calc(#{$nav-desktop-width} - 1px) !important
+	max-width: calc(#{$nav-desktop-width} - 1px) !important
 	color: $nav-color !important
 	background: $nav-background-color !important
 	border-top: $hairline !important
@@ -10,28 +11,28 @@
 	z-index: $z-index-tray
 	line-height: 30px
 	box-shadow: 1px 0 0 $border
-	
 	a
 		color: $nav-color !important
 		text-decoration: none
 	.rst-badge-small
 		display: none
 	.rst-current-version
-		padding: 0.4rem 0.7rem
+		padding: 0.4rem 0.7rem !important
 		background-color: $nav-background-color !important
-		display: block
-		text-align: right
-		font-size: 0.9rem
+		display: block !important
+		text-align: right !important
+		font-size: 0.9rem !important
 		cursor: pointer
 		color: $nav-color !important
-		line-height: 30px
+		line-height: 30px !important
+		height: auto !important
 		+clearfix
 		.fa
 			color: $nav-color !important
 		.fa-book
 			font-size: inherit
 			line-height: inherit
-			float: left
+			float: left !important
 		&.rst-out-of-date
 			background-color: $nav-caption !important
 			color: $bg !important
@@ -39,7 +40,7 @@
 			background-color: $nav-caption !important
 			color: $nav-color !important
 	&.shift-up
-		height: auto
+		height: auto !important
 		max-height: 100%
 	&.shift-up .rst-other-versions
 		display: block
@@ -63,30 +64,7 @@
 				padding: $base-line-height / 4
 				line-height: 1.5
 				color: $nav-color !important
-	&.rst-badge
-		width: $nav-desktop-width !important
-		bottom: 20px
-		right: 20px
-		left: auto
-		border: none
-		max-width: $nav-desktop-width !important
-		max-height: 90%
-		line-height: 30px
-		.fa-book
-			float: none
-			line-height: 30px
-		&.shift-up .rst-current-version
-			text-align: right
-			.fa-book
-				float: left
-		> .rst-current-version
-			width: auto
-			height: 30px
-			line-height: 30px
-			padding: 0 $base-line-height / 4
-			display: block
-			text-align: center
-
+	
 @media screen and (max-width: $nav-media-query * 0.85)
 	.rst-versions
 		display: none
