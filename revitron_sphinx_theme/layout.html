@@ -27,7 +27,8 @@
 	{% if theme_opengraph_image %}
 		<meta property="og:image" content="{{ theme_base_url }}{{ pathto('/_static/' + theme_opengraph_image, 1) }}" />
 	{% endif %}
-
+	<meta name="twitter:card" content="summary_large_image">
+	
 	{# CSS #}
 	<link rel="stylesheet" href="{{ pathto('_static/' + style, 1) }}" type="text/css" />
 	<link rel="stylesheet" href="{{ pathto('_static/pygments.css', 1) }}" type="text/css" />
