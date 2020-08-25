@@ -50,7 +50,6 @@ body
 	top: 0
 	bottom: 0
 	left: 0
-	
 	width: $nav-desktop-width
 	overflow-x: hidden
 	overflow-y: hidden
@@ -59,13 +58,23 @@ body
 	background: $nav-background-color
 	z-index: $z-index-popover
 	
-
 .wy-side-scroll
 	width: $nav-desktop-width + 1.5rem
 	position: relative
 	overflow-x: hidden
 	overflow-y: scroll
 	height: 100%
+
+	// Hairline on the right side
+	&:before
+		content: ''
+		position: absolute
+		display: block
+		width: $nav-desktop-width
+		height: 100%
+		top: 0
+		left: 0
+		border-right: 1px solid $border
 
 .wy-nav-top
 	display: none
