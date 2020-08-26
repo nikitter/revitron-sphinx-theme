@@ -46,7 +46,6 @@ This theme is highly customizable on both the page level and on a global level.
     html_theme_options = {
         'canonical_url': '',
         'analytics_id': 'UA-XXXXXXX-1', 
-        'logo_only': False,
         'style_external_links': False,
         'collapse_navigation': True,
         'sticky_navigation': True,

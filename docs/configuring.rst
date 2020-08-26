@@ -15,7 +15,6 @@ For example:
     html_theme_options = {
         'canonical_url': '',
         'analytics_id': 'UA-XXXXXXX-1',  #  Provided by Google in your dashboard
-        'logo_only': False,
         'style_external_links': False,
         'collapse_navigation': True,
         'sticky_navigation': True,
@@ -118,14 +117,6 @@ Miscellaneous options
 
     If ``True``, the version number is shown at the top of the sidebar.
 
-.. confval:: logo_only
-
-    :type: boolean
-    :default: ``False``
-
-    Only display the logo image, do not display the project name at the top of
-    the sidebar
-
 .. confval:: prev_next_buttons_location
 
     :type: string
@@ -188,9 +179,7 @@ Adding a logo
 -------------
 
 Using the Sphinx standard option :py:confval:`html_logo <sphinx:html_logo>`,
-you can set an image file to be used as a logo at the top of the sidebar. The
-theme option :py:confval:`logo_only` also allows for *only* the logo to be shown
-at the top of the sidebar.
+you can set an image file to be used as a logo at the top of the sidebar. 
 
 Adding custom CSS or Javascript
 -------------------------------

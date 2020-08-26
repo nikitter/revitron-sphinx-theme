@@ -62,7 +62,6 @@ intersphinx_mapping = {
 
 html_theme = 'revitron_sphinx_theme'
 html_theme_options = {
-    'logo_only': True,
     'navigation_depth': 5,
     'github_url': 'https://github.com/revitron/revitron'
 }
