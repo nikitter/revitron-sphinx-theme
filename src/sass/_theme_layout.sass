@@ -65,8 +65,9 @@ body
 	overflow-y: scroll
 	height: 100%
 
+@media screen and (min-width: $nav-media-query)
 	// Hairline on the right side
-	&:before
+	.wy-side-scroll:before
 		content: ''
 		position: fixed
 		display: block
@@ -188,7 +189,7 @@ footer
 .genindextable li > ul
 	margin-left: $base-line-height
 
-@media screen and (max-width: $nav-media-query * 0.85)
+@media screen and (max-width: $nav-media-query)
 	.wy-body-for-nav
 		background: $section-background-color
 	.wy-nav-top
@@ -219,7 +220,7 @@ footer
 			height: 100%
 			overflow: hidden
 
-@media screen and (min-width: $nav-media-query)
+@media screen and (min-width: ($nav-desktop-width + $nav-content-width))
 	.wy-nav-content
 		margin: 0
 		background: $section-background-color

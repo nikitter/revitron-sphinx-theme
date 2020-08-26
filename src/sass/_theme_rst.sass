@@ -357,7 +357,7 @@
 		dl.field-list
 			display: grid
 			grid-template-columns: max-content auto
-			align-items: center;
+			align-items: start;
 			margin: 1rem 0
 			> dt
 				padding-right: 1rem
@@ -366,7 +366,7 @@
 			> dt, > dd
 				margin: 0
 				padding: 0.35rem 0.75rem 0.35rem 0
-				> p
+				> p, > ul
 					margin: 0
 				code 
 					padding: 0
@@ -414,15 +414,21 @@
 	table.docutils
 		@extend .wy-table
 		@extend .wy-table-bordered-all
+		width: 100%
+		max-width: 100% !important
 		th
 			border-color: $table-border-color
 			html.writer-html5 &
 				border: 1px solid $table-border-color
 		html.writer-html5 &
-			th > p, td > p
-				line-height: $base-line-height
-				margin-bottom: 0rem
-				font-size: .9rem
+			th, td
+				vertical-align: top
+				& > p
+					line-height: $base-line-height
+					margin-bottom: 0rem
+					font-size: .9rem
+					white-space: normal
+			
 		// Remove bottom margin for the last element (and it's last child)
 		td .last, td .last > *:last-child
 			margin-bottom: 0
@@ -499,7 +505,7 @@
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
 		dl:not(.field-list) > dt
-			margin-bottom: $margin-rst / 4
+			margin-bottom: $margin-rst / 2
 			padding: $space-xs * 0.65 $space-xs
 			border: none
 			border-left: solid 2px $border
