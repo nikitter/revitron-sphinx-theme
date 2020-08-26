@@ -38,8 +38,13 @@ extensions = [
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinxcontrib.httpdomain',
-    'revitron_sphinx_theme'
+    'revitron_sphinx_theme',
+    'autodocsumm'
 ]
+
+autodoc_default_options = {
+    'autosummary': True 
+}
 
 templates_path = ['_templates']
 source_suffix = '.rst'
