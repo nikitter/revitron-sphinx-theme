@@ -65,18 +65,17 @@ body
 	overflow-y: scroll
 	height: 100%
 
-@media screen and (min-width: $nav-media-query)
-	// Hairline on the right side
-	.wy-side-scroll:before
-		content: ''
-		position: fixed
-		display: block
-		width: $nav-desktop-width
-		height: 100vh
-		top: 0
-		left: 0
-		pointer-events: none
-		border-right: 1px solid $border
+// Hairline on the right side
+.wy-side-scroll:before
+	content: ''
+	position: absolute
+	display: block
+	width: $nav-desktop-width
+	height: 100%
+	top: 0
+	left: 0
+	pointer-events: none
+	border-right: 1px solid $border
 
 .wy-nav-top
 	display: none
