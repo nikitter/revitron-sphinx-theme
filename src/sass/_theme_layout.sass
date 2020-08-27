@@ -68,14 +68,20 @@ body
 // Hairline on the right side
 .wy-side-scroll:before
 	content: ''
-	position: absolute
-	display: block
+	position: fixed
+	display: none
 	width: $nav-desktop-width
 	height: 100%
 	top: 0
 	left: 0
 	pointer-events: none
 	border-right: 1px solid $border
+	.shift & 
+		display: block
+
+@media screen and (min-width: $nav-media-query)
+	.wy-side-scroll:before
+		display: block
 
 .wy-nav-top
 	display: none
@@ -84,7 +90,7 @@ body
 	padding: 0 $gutter / 2
 	border-bottom: $hairline
 	position: relative
-	line-height: 3.8rem
+	line-height: 4rem
 	text-align: left
 	font-size: 100%
 	+clearfix
@@ -92,9 +98,9 @@ body
 		color: inherit
 		font-weight: bold
 		+font-smooth
-		margin: 0.8rem $gutter / 2
+		margin: 1rem $gutter / 2
 	img
-		height: 2.2rem
+		height: 2rem
 	i
 		font-size: 1.25rem
 		line-height: inherit
@@ -201,12 +207,6 @@ footer
 		&.shift
 			width: $nav-desktop-width
 			left: 0
-	.wy-side-scroll
-		width: auto
-	.wy-side-nav-search
-		width: auto
-	.wy-menu.wy-menu-vertical
-		width: auto
 	.wy-nav-content-wrap
 		margin-left: 0
 		.wy-nav-content
