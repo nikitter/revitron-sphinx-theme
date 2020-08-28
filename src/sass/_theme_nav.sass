@@ -14,7 +14,7 @@
 		padding: $space-nav $gutter
 		margin: $space-s 0 0 0
 		display: block
-		font-weight: 640
+		font-weight: 700
 	& > :first-child
 		margin-top: 0 !important
 		
@@ -141,13 +141,18 @@
 	color: $nav-search-color
 
 	input[type="text"] 
-		width: 100%
-		border: 1px solid $border-search
-		background-color: rgba(255,255,255,0.4) !important
+		display: block
+		width: 90%
+		position: relative
+		left: 0
+		right: 0
+		border: 2px solid $border-search
+		background-color: transparent !important
 		-webkit-appearance: none !important
-		padding: 0 0.75rem
+		padding: 0 1rem
+		margin: 0 calc(-1rem - 2px)
 		line-height: 2.25rem
-		border-radius: $radius
+		border-radius: 100px
 		box-shadow: none
 		font-size: inherit
 		color: $nav-search-color
@@ -175,7 +180,7 @@
 		display: inline-block
 		padding: 0
 		padding-top: 5px
-		margin-bottom: 3.5rem
+		margin-bottom: 3.9rem
 		+font-smooth	
 		img.logo
 			display: block  // display on its own line all the time
