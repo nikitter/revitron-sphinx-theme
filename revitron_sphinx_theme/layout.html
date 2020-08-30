@@ -1,5 +1,5 @@
-{%- if meta is defined %}
-    {% extends meta.page_template|default('default.html') %}
+{%- if landing_page is defined and pagename == master_doc %}
+    {% extends 'landing.html' %}
 {% else %}
 	{% extends 'default.html' %}
 {%- endif %}

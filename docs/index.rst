@@ -1,8 +1,23 @@
-.. include:: ../README.rst
+
+.. image:: demo/static/revitron.svg
+
+Revitron
+========
+
+.. container:: .large
+	
+   The Revitron library can be installed as a single Python package for pyRevit or bundled with a custom fork of pyRevit including the Jarvis package manager und the Revitron UI.
+
+.. container:: .buttons
+
+   `Docs <installing.html>`_
+   `GitHub <installing.html>`_
+
 
 .. toctree::
    :caption: Theme Documentation
    :maxdepth: 2
+   :hidden:
 
    installing
    configuring
@@ -16,6 +31,7 @@
 
 .. toctree::
     :maxdepth: 2
+    :hidden:
     :numbered:
     :caption: Demo Documentation
 
@@ -26,6 +42,7 @@
 
 .. toctree::
     :maxdepth: 3
+    :hidden:
     :numbered:
     :caption: This is an incredibly long caption for a long menu
 

@@ -66,7 +66,14 @@ html_theme_options = {
     'github_url': 'https://github.com/revitron/revitron'
 }
 
-html_context = {}
+html_context = {
+	'landing_page': {
+		'menu': [
+			{'title': 'Docs', 'url': 'installing.html'},
+			{'title': 'GitHub', 'url': 'https://github.com'}
+		]
+	} 
+}
 
 if not 'READTHEDOCS' in os.environ:
     html_static_path = ['_static/']

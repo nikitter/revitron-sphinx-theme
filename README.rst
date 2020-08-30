@@ -59,6 +59,38 @@ This theme is highly customizable on both the page level and on a global level.
 
     html_logo = "demo/static/logo.svg"
 
+Adding a Landing Page
+=====================
+
+It is possible to render the ``master_doc`` page with a landing page template. 
+That template provides some special classes to style content and add buttons. 
+It can be enabled and configured in the ``conf.py`` as follows.
+
+.. code:: python
+
+    html_context = {
+        'landing_page': {
+            'menu': [
+                {'title': 'Get Started', 'url': 'installing.html'},
+                {'title': 'GitHub', 'url': 'https://github.com/user/repo'}
+            ]
+        } 
+    }
+
+The landing page templates provides two ``container`` classes to style paragraphs and create buttons directly in a ``.rst`` file.
+
+.. code:: 
+
+    .. container:: .large
+	
+       A large text block ...
+
+    .. container:: .buttons
+
+       `Docs <installing.html>`_
+       `GitHub <installing.html>`_
+
+
 
 Contributing
 ============

@@ -1,0 +1,75 @@
+.landing	
+	.navbar
+		ul 
+			display: flex
+			width: 100%
+			max-width: $nav-content-width
+			margin: 0 auto
+			box-sizing: border-box
+			padding: 0 ($gutter - 0.75em)
+			overflow: auto
+			li, .github
+				a 
+					display: inline-block
+					padding: 0 0.75em !important
+					font-size: 1em
+					line-height: 3.5rem
+					+transition(all .2s)
+					&:hover 
+						color: $muted
+			li.github 
+				flex-grow: 2
+				text-align: right
+				a
+					font-size: 1.2em
+	body > .container 
+		max-width: $nav-content-width
+		padding: 0 $gutter
+		margin: $space-l auto
+		.container 
+			margin: $space-m 0
+
+	.rst-content
+		h1 
+			margin-top: 3.6rem
+			margin-bottom: 1.8rem 
+		.large p
+			font-size: 150%
+			line-height: 1.5
+			font-weight: 500
+		.buttons
+			a 
+				display: inline-block
+				font-size: 1.25rem
+				line-height: 2.5
+				margin-right: 0.5rem
+				padding: 0 1.5rem
+				border: 2px solid $border 
+				border-radius: 100px
+				text-decoration: none
+				font-weight: 700
+				+transition(all .2s)
+				&:hover 
+					border-color: $text
+			a:first-child 
+				color: $bg
+				background-color: $text
+				border-color: $text
+				&:hover 
+					color: $text
+					background-color: $bg
+	footer 
+		margin-top: $space-xl
+
+
+@media screen and (max-width: $nav-media-query)
+	.landing 
+		.navbar ul 
+			padding: 0 (($gutter / 2) - 0.75em)
+		body > .container 
+			margin: 4.5rem auto
+			padding: 0 $gutter / 2
+
++media(new-breakpoint(min-width $nav-media-query 12))
+	.landing .navbar
+		padding-top: 1.4rem

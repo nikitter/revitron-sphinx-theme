@@ -1,5 +1,5 @@
 <footer>
-  {% if (next or prev) %}
+  {% if (next or prev) and landing_page is defined and pagename != master_doc %}
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       {% if next %}
         <a href="{{ next.link|e }}" class="btn btn-neutral float-right" title="{{ next.title|striptags|e }}" accesskey="n" rel="next">{{ _('Next') }} &nbsp;<b>⟶</b></a>

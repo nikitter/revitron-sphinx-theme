@@ -1,0 +1,40 @@
+{# TEMPLATE VAR SETTINGS #}
+{%- set url_root = pathto('', 1) %}
+{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
+{%- if not embedded and docstitle %}
+	{%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
+{%- else %}
+	{%- set titlesuffix = "" %}
+{%- endif %}
+{%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
+{%- set sphinx_writer = 'writer-html5' if html5_doctype else 'writer-html4' %}
+
+<!DOCTYPE html>
+<html class="{{ sphinx_writer }} landing" lang="{{ lang_attr }}" >
+
+{% include 'header.html' %}
+
+<body class="wy-body-for-nav">
+
+	{% if landing_page.menu is defined %}
+		<nav class="navbar">
+			<ul>
+				{% for item in landing_page.menu %}
+					<li><a href="{{ item.url }}">{{ item.title }}</a></li>	
+				{% endfor %}
+				{% if theme_github_url %}
+					<li class="github"><a href="{{ theme_github_url }}" class="fa fa-github-alt"></a></li>	
+				{% endif %}
+			</ul>
+		</nav>
+	{% endif %}
+
+	<div class="container">
+		<div class="rst-content">
+			{% block body %}{% endblock %}
+		</div>
+		{% include "footer.html" %}
+	</div>
+	
+</body>
+</html>
