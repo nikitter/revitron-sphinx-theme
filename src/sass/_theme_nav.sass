@@ -40,11 +40,12 @@
 
 		a.reference
 			line-height: $base-line-height
+			border-right: 2px solid transparent
 		a.reference.current, a.reference.current:hover
 			color: $nav-color
 			background-color: $bg-nav-current !important
 			box-shadow: 1px 0 0 $text
-			border-right: 2px solid
+			border-right: 2px solid $text
 		
 	// On state for the first level
 	li.on a, li.current > a
@@ -168,31 +169,28 @@
 	::-ms-input-placeholder 
 		color: $muted;
 
-	img
-		display: block
-		height: 4.25rem !important
-		padding: 0
-		
-	> a, .wy-dropdown > a
-		color: $nav-search-color
-		font-size: 100%
-		font-weight: bold
-		display: inline-block
-		padding: 0
-		padding-top: 5px
-		margin-bottom: 3.9rem
-		+font-smooth	
-		img.logo
-			display: block  // display on its own line all the time
-			margin: 0 auto
-			height: auto  // undo badge styling above
-			width: auto
-			border-radius: 0
-			max-width: 100%  // shrink on mobile, if appropriate
-			background: rgba(0,0,0,0)  // make hover background of parent show up properly
-		&.icon
+	.brand
+		min-height: 9.35rem
+		height: 9.35rem
+		max-height: 9.35rem
+		> a	
+			color: $nav-search-color
+			font-size: 100%
+			font-weight: bold
+			display: inline-block
+			padding: 0
+			padding-top: 5px
+			+font-smooth	
 			img.logo
-				margin-top: 0.85em  // space it away from the title text
+				display: block  // display on its own line all the time
+				margin: 0 
+				padding: 0
+				height: 4.25rem !important
+				max-height: 4.25rem
+				width: auto
+				border-radius: 0
+				max-width: 100%  // shrink on mobile, if appropriate
+				background: rgba(0,0,0,0)  // make hover background of parent show up properly
 
 .wy-nav .wy-menu-vertical
 	header
