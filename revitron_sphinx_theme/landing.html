@@ -1,20 +1,6 @@
-{# TEMPLATE VAR SETTINGS #}
-{%- set url_root = pathto('', 1) %}
-{%- if url_root == '#' %}{% set url_root = '' %}{% endif %}
-{%- if not embedded and docstitle %}
-	{%- set titlesuffix = " &mdash; "|safe + docstitle|e %}
-{%- else %}
-	{%- set titlesuffix = "" %}
-{%- endif %}
-{%- set lang_attr = 'en' if language == None else (language | replace('_', '-')) %}
-{%- set sphinx_writer = 'writer-html5' if html5_doctype else 'writer-html4' %}
-
-<!DOCTYPE html>
-<html class="{{ sphinx_writer }} landing" lang="{{ lang_attr }}" >
-
-{% include 'header.html' %}
-
-<body class="wy-body-for-nav">
+{% extends 'default.html' %}
+{% block style %} landing{% endblock %}
+{% block mainLayout %}
 
 	{% if landing_page.menu is defined %}
 		<nav class="navbar">
@@ -36,5 +22,4 @@
 		{% include "footer.html" %}
 	</div>
 	
-</body>
-</html>
+{% endblock %}
