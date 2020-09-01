@@ -18,7 +18,7 @@
 		font-size: 2.6rem
 		line-height: 1.2
 		letter-spacing: -0.02em
-		margin-top: 6rem
+		margin-top: 6.4rem
 		margin-bottom: $space-m + 0.18rem
 		font-weight: 720
 
@@ -173,37 +173,40 @@
 		margin: $margin-rst 0
 		padding: $space-s
 		clear: both
-		background-color: $bg-panel
-		border-left: 3px solid
+		background-color: $text
+		color: $bg
+		font-weight: 520
 		> *
 			margin: 0
+		*
+			color: inherit !important
+			background-color: inherit !important
 
 	.admonition-title
 		display: block
 		margin: 0 0 $space-s 0
-		font-weight: 700
-		color: $text
+		font-weight: inherit
+		color: inherit
 		@extend .fa
-		@extend .fa-lightbulb-o
+		@extend .fa-bolt
 		&:before
-			margin-right: 0.5rem
+			margin-right: 1rem
+			font-size: 120%
 
-	@mixin alert($icon, $color: inherit)
-		border-color: $color
+	@mixin alert($icon: '.fa-bolt', $color: $bg, $bg: $text)
+		color: $color
+		background-color: $bg
 		.admonition-title
 			@extend #{$icon}
 
-	.note, .seealso
-		@include alert('.fa-lightbulb-o')
-
-	.hint, .tip, .important
-		@include alert('.fa-lightbulb-o')
+	.note, .seealso, .important, .hint, .tip
+		@include alert()
 
 	.error, .danger
-		@include alert('.fa-fire', #ff4128)
+		@include alert('.fa-fire', $bg, #ff4234)
 
 	.warning, .caution, .attention, .admonition-todo
-		@include alert('.fa-lightbulb-o', #ffb71d)
+		@include alert('.fa-bolt', $text, #fffc52)
 
 	// Some people put tables in notes. Let's give them very basic support.
 	.admonition table
@@ -423,6 +426,7 @@
 		html.writer-html5 &
 			th, td
 				vertical-align: top
+				padding: 0.7rem 0.85rem
 				& > p
 					line-height: $base-line-height
 					margin-bottom: 0rem
@@ -489,11 +493,11 @@
 			display: table
 			margin: $margin-rst / 4 0
 			font-size: 1rem
-			line-height: 1.4
-			background: $bg-code
-			color: $class-color
-			border-top: solid 2px $border
-			padding: $space-xs * 0.65 $space-xs
+			line-height: 1.6
+			background: $text
+			color: $bg
+			//border-top: solid 2px $border
+			padding: 0.6rem 1.2rem
 			position: relative
 			em.property
 				display: inline !important
@@ -508,7 +512,7 @@
 			margin-bottom: $margin-rst / 2
 			padding: $space-xs * 0.65 $space-xs
 			border: none
-			border-left: solid 2px $border
+			//border-left: solid 2px $border
 			background: $bg-code
 			color: $method-color
 			.headerlink
@@ -521,7 +525,7 @@
 			font-weight: bold
 			&.descname, &.descclassname
 				color: inherit
-				background-color: transparent
+				background-color: inherit !important
 				border: none
 				padding: 0
 				font-size: 100% !important

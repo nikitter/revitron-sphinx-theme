@@ -4,7 +4,7 @@
 	
 .wy-menu-vertical
 	width: $nav-desktop-width
-	padding-top: $space-m
+	padding-top: $space-m - 0.275rem
 	padding-bottom: $space-l
 	border-right: $hairline
 
@@ -18,6 +18,9 @@
 	& > :first-child
 		margin-top: 0 !important
 		
+	li.current 
+		background-color: $bg-panel !important
+
 	li
 		
 		a
@@ -40,12 +43,12 @@
 
 		a.reference
 			line-height: $base-line-height
-			border-right: 2px solid transparent
 		a.reference.current, a.reference.current:hover
-			color: $nav-color
+			color: $nav-current
 			background-color: $bg-nav-current !important
-			box-shadow: 1px 0 0 $text
-			border-right: 2px solid $text
+			box-shadow: 1px 0 0 $bg-nav-current
+			*
+				background-color: inherit !important
 		
 	// On state for the first level
 	li.on a, li.current > a
@@ -129,7 +132,6 @@
 			background-color: $bg-nav-hover
 			cursor: pointer
 			
-
 .wy-side-nav-search
 	display: block
 	width: $nav-desktop-width
@@ -145,34 +147,38 @@
 		display: block
 		width: 90%
 		position: relative
-		left: 0
-		right: 0
 		border: 2px solid $border-search
 		background-color: transparent !important
 		-webkit-appearance: none !important
 		padding: 0 1rem
 		margin: 0 calc(-1rem - 2px)
-		line-height: 2.25rem
-		border-radius: 100px
+		line-height: 2.6rem
+		font-weight: 700
 		box-shadow: none
 		font-size: inherit
 		color: $nav-search-color
 		&:focus
 			border-color: $nav-search-color
+			&::placeholder 
+				color: transparent;
+			&:-ms-input-placeholder  
+				color: transparent;
+			&::-ms-input-placeholder 
+				color: transparent;
 
 	::placeholder 
-		color: $muted;
+		color: $text;
 	
 	:-ms-input-placeholder  
-		color: $muted;
+		color: $text;
 	
 	::-ms-input-placeholder 
-		color: $muted;
+		color: $text;
 
 	.brand
-		min-height: 9.35rem
-		height: 9.35rem
-		max-height: 9.35rem
+		min-height: 9.5rem
+		height: 9.5rem
+		max-height: 9.5rem
 		> a	
 			color: $nav-search-color
 			font-size: 100%
