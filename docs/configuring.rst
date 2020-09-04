@@ -21,8 +21,6 @@ For example:
         'navigation_depth': 4,
         'includehidden': True,
         'titles_only': False,
-        'opengraph_image': 'static/logo.svg',
-        'base_url': 'https://domain.com',
         'github_url': ''
     }
 
