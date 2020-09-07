@@ -75,7 +75,10 @@ It can be enabled and configured in the ``conf.py`` as follows.
         } 
     }
 
-The landing page templates provides two ``container`` classes to style paragraphs and create buttons directly in a ``.rst`` file.
+Container Classes
+=================
+
+This theme provides three ``container`` classes to style paragraphs, wrap images and create buttons directly in a ``.rst`` file.
 
 .. code:: 
 
@@ -88,7 +91,9 @@ The landing page templates provides two ``container`` classes to style paragraph
        `Docs <installing.html>`_
        `GitHub <installing.html>`_
 
+	.. container:: .image
 
+	   .. image:: image.png
 
 Contributing
 ============

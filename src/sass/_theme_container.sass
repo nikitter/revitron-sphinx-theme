@@ -1,0 +1,35 @@
+.rst-content
+
+	.container 
+		margin: $margin-rst 0
+
+	.large p
+		font-size: 150%
+		line-height: 1.5
+		font-weight: 500
+	.buttons
+		a 
+			display: inline-block
+			font-size: 1.25rem
+			line-height: 2.5
+			margin-right: 0.5rem
+			padding: 0 1.75rem
+			border: 2px solid $border 
+			text-decoration: none
+			font-weight: 700
+			+transition(all .2s)
+			&:hover 
+				border-color: $text
+		a:first-child 
+			color: $bg
+			background-color: $text
+			border-color: $text
+			&:hover 
+				color: $text
+				background-color: $bg
+	.image
+		background-color: $bg-panel
+		text-align: center
+		padding: $space-m
+		img 
+			box-shadow: 0 5px $space-m rgba(0,0,0,0.2)
