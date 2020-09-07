@@ -103,7 +103,7 @@
 					padding-left: $gutter * ((($toc_level - 1) * 0.5) + 1)
 				
 				a:hover span.toctree-expand
-					@extend %toctree_hover_link_color
+					color: inherit
 		@if $toc_level > 2 and $toc_level < 5
 			li.toctree-l#{$toc_level}
 				@extend %shrink_toctree_element
@@ -127,7 +127,7 @@
 			background-color: $bg-nav-hover
 			cursor: pointer
 			span.toctree-expand
-				color: $nav-color
+				color: inherit
 		&:active
 			background-color: $bg-nav-hover
 			cursor: pointer
