@@ -159,7 +159,9 @@
 			{% block mobile_nav %}
 				<i data-toggle="wy-nav-top" class="fa fa-bars"></i>
 				<a href="{{ pathto(master_doc) }}">
-					{% if logo %}
+					{% if theme_logo_mobile %}
+						<img src="{{ pathto('_static/' + theme_logo_mobile, 1) }}" class="logo" alt="{{ _('Logo') }}"/>
+					{% elif logo %}
 						<img src="{{ pathto('_static/' + logo, 1) }}" class="logo" alt="{{ _('Logo') }}"/>
 					{% else %}
 						{{ project }}

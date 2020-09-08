@@ -61,8 +61,10 @@ intersphinx_mapping = {
 }
 
 html_theme = 'revitron_sphinx_theme'
+
 html_theme_options = {
     'navigation_depth': 5,
+    'logo_mobile': 'revitron-ui-mobile.svg',
     'github_url': 'https://github.com/revitron/revitron'
 }
 
@@ -85,7 +87,7 @@ if not 'READTHEDOCS' in os.environ:
         range(1, 100)
     ))
 
-html_logo = "demo/static/revitron.svg"
+html_logo = 'demo/static/revitron.svg'
 html_show_sourcelink = True
 
 htmlhelp_basename = slug
