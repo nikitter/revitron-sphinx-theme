@@ -92,9 +92,9 @@ This theme provides three ``container`` classes to style paragraphs, wrap images
        `Docs <installing.html>`_
        `GitHub <installing.html>`_
 
-	.. container:: .image
+    .. container:: .image
 
-	   .. image:: image.png
+       .. image:: image.png
 
 Contributing
 ============
