@@ -42,15 +42,15 @@
 		font-size: 1.3rem
 		line-height: 1.4
 		letter-spacing: -0.02em
-		margin-top: $space-s
-		margin-bottom: $space-xs
+		margin-top: $margin-rst
+		margin-bottom: $margin-rst !important
 		font-weight: 450
 
 	h5
 		font-size: 1.15rem
 		line-height: 1.5
-		margin-top: $space-s
-		margin-bottom: $space-xs
+		margin-top: $margin-rst
+		margin-bottom: $margin-rst !important
 		font-weight: 460
 
 	hr
@@ -130,7 +130,7 @@
 	.linenodiv pre
 		border-right: solid 1px lighten($table-border-color, 2%)
 		margin: 0
-		padding: $margin-rst / 2
+		padding: 1rem
 		font-family: $code-font-family
 		user-select: none
 		pointer-events: none
@@ -138,14 +138,14 @@
 	div[class^='highlight'] pre
 		white-space: pre
 		margin: 0
-		padding: $margin-rst / 2
+		padding: 1rem
 		display: block
 		overflow: auto
 		& .hll
 			// Line emphasis spans full width
 			display: block
-			margin: 0 -1 * $margin-rst / 2
-			padding: 0 $margin-rst / 2
+			margin: 0 -1 * 1rem
+			padding: 0 1rem
 	pre.literal-block, div[class^='highlight'] pre, .linenodiv pre
 		font-family: $code-font-family
 		font-size: 12px
@@ -225,17 +225,17 @@
 	// Complex bullet lists, they have more item margins than simple lists
 	.section ol li, .section ul li
 		> *
-			margin-top: $margin-rst / 2
-			margin-bottom: $margin-rst / 2
+			margin-top: 1rem
+			margin-bottom: 1rem
 			&:first-child
 				margin-top: 0rem
 		> p
 			&, &:last-child
-				margin-bottom: $margin-rst / 2
+				margin-bottom: 1rem
 			&:only-child, &:only-child:last-child
 				margin-bottom: 0rem
 		> ul, > ol
-			margin-bottom: $margin-rst / 2
+			margin-bottom: 1rem
 	// Simple lists, no item margins
 	.section ul, .section ol, .wy-plain-list-decimal
 		margin-bottom: $margin-rst 
@@ -260,7 +260,7 @@
 	// Generics handling of headings and toc stuff.
 	.topic-title
 		font-weight: bold
-		margin-bottom: $margin-rst / 2
+		margin-bottom: 1rem
 	.toc-backref
 		color: $text-color
 	.align-right
@@ -317,7 +317,7 @@
 			font-family: $custom-font-family
 			font-weight: bold
 			background: $bg-panel
-			padding: $margin-rst / 4 $margin-rst / 2
+			padding: 0.5rem 1rem
 			margin: -$margin-rst
 			margin-bottom: $margin-rst
 			font-size: 100%
@@ -491,13 +491,13 @@
 		margin-bottom: $margin-rst
 		dt
 			font-weight: bold
-			margin-bottom: $margin-rst / 2
+			margin-bottom: 1rem
 		// Most of the content within these dls are one liners, so I halve the normal margins.
 		p, table, ul, ol, > dd > [class*="highlight"]
-			margin-bottom: $margin-rst / 2
+			margin-bottom: 1rem
 		// rST seems to want dds to be treated as the browser would, indented.
 		dd
-			margin: 0  0 $margin-rst / 2 $margin-rst
+			margin: 0  0 1rem $margin-rst
 			line-height: $base-line-height
 	html.writer-html4 & dl:not(.docutils),
 	html.writer-html5 & dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)
@@ -521,7 +521,7 @@
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
 		dl:not(.field-list) > dt
-			margin-bottom: $margin-rst / 2
+			margin-bottom: 1rem
 			padding: $space-xs * 0.65 $space-xs
 			border: none
 			background: $bg-code
