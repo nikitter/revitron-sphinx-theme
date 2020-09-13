@@ -504,12 +504,12 @@
 		margin-bottom: $margin-rst
 		> dt
 			display: table
-			margin: $margin-rst / 1.65 0
+			margin: 1rem 0 !important
 			font-size: 1rem
 			line-height: 1.6
 			background: $bg-code
 			color: $text
-			padding: 0.6rem 1.2rem
+			padding: 0.5rem 1rem
 			position: relative
 			em.property
 				display: inline !important
@@ -518,17 +518,15 @@
 				font-size: 100% !important
 				text-decoration: none !important
 		&.class > dt
+			padding: 0.6rem 1.2rem
+			font-size: 1rem
+			line-height: 1.6
 			background: $text
 			color: $bg	
 	
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
 		dl:not(.field-list) > dt
-			margin-bottom: 1rem
-			padding: $space-xs * 0.65 $space-xs
-			border: none
-			background: $bg-code
-			color: $method-color
 			.headerlink
 				color: $headerlink-color
 				font-size: 100% !important
