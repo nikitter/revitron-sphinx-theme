@@ -500,15 +500,15 @@
 			margin: 0  0 1rem $margin-rst
 			line-height: $base-line-height
 	html.writer-html4 & dl:not(.docutils),
-	html.writer-html5 & dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)
+	html.writer-html5 & dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary)
 		margin-bottom: $margin-rst
 		> dt
 			display: table
 			margin: $margin-rst / 1.65 0
 			font-size: 1rem
 			line-height: 1.6
-			background: $text
-			color: $bg
+			background: $bg-code
+			color: $text
 			padding: 0.6rem 1.2rem
 			position: relative
 			em.property
@@ -517,6 +517,9 @@
 				color: $headerlink-color
 				font-size: 100% !important
 				text-decoration: none !important
+		&.class > dt
+			background: $text
+			color: $bg	
 	
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
