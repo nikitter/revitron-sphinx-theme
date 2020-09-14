@@ -509,8 +509,9 @@
 			line-height: 1.6
 			background: $bg-code
 			color: $text
-			padding: 0.5rem 1rem
+			padding: 0.4rem 0.8rem
 			position: relative
+			border-left: 1px solid $border
 			em.property
 				display: inline !important
 			.headerlink
@@ -518,11 +519,11 @@
 				font-size: 100% !important
 				text-decoration: none !important
 		&.class > dt
-			padding: 0.6rem 1.2rem
 			font-size: 1rem
 			line-height: 1.6
 			background: $text
-			color: $bg	
+			color: $bg
+			border-color: transparent 	
 	
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
