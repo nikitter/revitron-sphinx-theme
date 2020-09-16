@@ -8,6 +8,12 @@ html
 +media(new-breakpoint(min-width 1400px 12))
 	html
 		font-size: 16px
++media(new-breakpoint(min-width 1600px 12))
+	html
+		font-size: 17px
++media(new-breakpoint(min-width 1800px 12))
+	html
+		font-size: 18px
 
 body
 	background-color: $bg
@@ -207,12 +213,12 @@ footer
 			height: 100%
 			overflow: hidden
 
-@media screen and (min-width: ($nav-desktop-width + $nav-content-width))
+@media screen and (min-width: $nav-media-query)
 	.wy-nav-content
 		margin: 0
 		background: $section-background-color
 
-+media(new-breakpoint(min-width $nav-desktop-width + $nav-desktop-width + $nav-content-width 12))
++media(new-breakpoint(min-width ($nav-desktop-width * 2.5) + $nav-content-width 12))
 	.wy-nav-content-wrap
 		margin-left: 0
 	.wy-nav-content
