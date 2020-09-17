@@ -38,6 +38,9 @@
 		margin-bottom: $margin-rst !important
 		font-weight: 620
 
+	ul.search li a 
+		display: inline-block
+		margin: 1rem 0 0.75rem 0 !important
 	h4
 		font-size: 1.3rem
 		line-height: 1.4
@@ -599,5 +602,5 @@
 			width: 100%
 
 +media(new-breakpoint(max-width $nav-media-query 12)) 
-	h1:first-child	
-		margin-top: $space-m
+	h1:first-child, #search-results h2
+		margin-top: $space-m !important
