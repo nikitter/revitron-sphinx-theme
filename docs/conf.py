@@ -88,6 +88,7 @@ if not 'READTHEDOCS' in os.environ:
     ))
 
 html_logo = 'demo/static/revitron.svg'
+html_title = 'Revitron'
 html_show_sourcelink = True
 
 htmlhelp_basename = slug
