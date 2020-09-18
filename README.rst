@@ -11,7 +11,7 @@ a working demo of the theme in the `Revitron documentation`_.
 .. _Read the Docs: https://github.com/readthedocs/sphinx_rtd_theme
 .. _Revitron documentation: https://revitron.readthedocs.io/en/latest/
 
-.. image :: https://raw.githubusercontent.com/revitron/revitron-sphinx-theme/master/mockup.jpg
+.. image:: https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/revitron/default.png
 
 Installation
 ============
@@ -76,6 +76,8 @@ It can be enabled and configured in the ``conf.py`` as follows.
         } 
     }
 
+.. image:: https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/revitron/landing.png
+
 Container Classes
 =================
 
@@ -95,6 +97,8 @@ This theme provides three ``container`` classes to style paragraphs, wrap images
     .. container:: .image
 
        .. image:: image.png
+
+.. image:: https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/revitron/mobile.png
 
 Contributing
 ============
