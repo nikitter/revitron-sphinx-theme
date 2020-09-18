@@ -26,8 +26,8 @@ from sphinx.locale import _
 
 project = u'Revitron'
 slug = re.sub(r'\W+', '-', project.lower())
-version = '0.5.0'
-release = '0.5.0'
+version = '0.6.0'
+release = '0.6.0'
 author = 'Marc Anton Dahmen'
 copyright = author
 language = 'en'
