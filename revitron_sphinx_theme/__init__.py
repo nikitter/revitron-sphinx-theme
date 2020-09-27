@@ -9,7 +9,7 @@ from os import path
 import sphinx
 
 
-__version__ = '0.6.0'
+__version__ = '0.6.1'
 __version_full__ = __version__
 
 
