@@ -29,7 +29,7 @@ slug = re.sub(r'\W+', '-', project.lower())
 version = '0.6.1'
 release = '0.6.1'
 author = 'Marc Anton Dahmen'
-copyright = author
+copyright = '<a href="https://marcdahmen.de">Marc Anton Dahmen</a>'
 language = 'en'
 
 extensions = [
