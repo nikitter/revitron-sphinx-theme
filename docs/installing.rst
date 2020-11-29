@@ -10,7 +10,9 @@ Install the package (or add it to your ``requirements.txt`` file):
 
 In your ``conf.py`` file:
 
-.. code:: python
+.. code-block:: python
+   :linenos:
+   :emphasize-lines: 3,5
 
     import sphinx_rtd_theme
 
