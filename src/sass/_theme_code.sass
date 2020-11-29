@@ -4,7 +4,9 @@
 
 .highlight-python,
 pre, code
-	font-size: 1em !important
+	font-weight: 400
+	font-size: 0.94rem !important
+	line-height: 1.6 !important
 	border: none !important
 	background-color: $bg-code !important
 
@@ -12,3 +14,17 @@ pre
 	padding: $space-s !important
 	code 
 		padding: 0
+
+.highlight .hll
+	margin-left: -$space-s !important
+	margin-right: -$space-s !important
+	padding-left: $space-s !important
+	padding-right: $space-s !important
+	font-weight: 500
+	background-color: darken($bg-code, 3%) !important
+
+.linenos pre
+	padding-right: 0.4rem !important
+
+.linenos + .code .highlight pre
+	padding-left: 0 !important
