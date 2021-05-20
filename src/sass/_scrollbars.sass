@@ -6,7 +6,10 @@
 		background-color: transparent
 	
 	*::-webkit-scrollbar-track 
-		border-left: 1px solid var(--border)
+		&:vertical
+			border-left: 1px solid var(--border)
+		&:horizontal
+			border-top: 1px solid var(--border)
 	
 	*::-webkit-scrollbar-thumb 
 		min-width: 3rem
@@ -20,7 +23,6 @@
 	
 	*::-webkit-scrollbar-thumb:hover 
 		background-color: var(--bg-nav-hover)
-		border-color: transparent
 	
 	*::-webkit-scrollbar-corner 
 		background-color: transparent
