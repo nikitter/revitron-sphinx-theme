@@ -540,6 +540,10 @@
 				color: $headerlink-color
 				font-size: 100% !important
 				text-decoration: none !important
+			a
+				margin-left: 0.5rem
+				&:after
+					border-bottom: none !important
 		&.class > dt
 			padding: 0.6rem 1.2rem
 			font-size: 1rem
@@ -552,6 +556,9 @@
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
 		dl:not(.field-list) > dt
+			a
+				&:after
+					border-bottom: none !important
 			.headerlink
 				color: $headerlink-color
 				font-size: 100% !important
