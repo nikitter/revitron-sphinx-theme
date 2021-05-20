@@ -4,19 +4,21 @@
 		margin: $margin-rst 0
 
 	.large p
-		font-size: 150%
+		font-size: 160%
 		line-height: 1.5
-		font-weight: 500
+		font-weight: calc(450 * var(--font-weight-factor))
 	.buttons
 		a 
 			display: inline-block
-			font-size: 1.25rem
+			font-size: 1.35rem
 			line-height: 2.5
-			margin-right: 0.5rem
-			padding: 0 1.75rem
+			margin-right: 0.5em
+			padding: 0 1.5em
 			border: 2px solid $border 
 			text-decoration: none
-			font-weight: 700
+			font-weight: calc(620 * var(--font-weight-factor))
+			border-radius: 100px
+			color: $text
 			+transition(all .2s)
 			&:hover 
 				border-color: $text

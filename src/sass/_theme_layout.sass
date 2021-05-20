@@ -2,22 +2,22 @@
 html
 	font-size: 14px
 	background-color: $bg
-+media(new-breakpoint(min-width 410px 12))
++media(new-breakpoint(min-width 480px 12))
 	html
 		font-size: 15px
 +media(new-breakpoint(min-width 1400px 12))
 	html
 		font-size: 16px
-+media(new-breakpoint(min-width 1600px 12))
++media(new-breakpoint(min-width 1700px 12))
 	html
 		font-size: 17px
-+media(new-breakpoint(min-width 1800px 12))
++media(new-breakpoint(min-width 1900px 12))
 	html
 		font-size: 18px
 
 body
 	background-color: $bg
-	font-weight: 450
+	font-weight: calc(450 * var(--font-weight-factor))
 
 .wy-affix
 	position: fixed
@@ -93,7 +93,7 @@ body
 .wy-nav-top
 	display: none
 	background: $nav-search-background-color
-	color: $nav-search-color
+	color: $nav-color
 	padding: 0 $gutter / 2
 	border-bottom: $hairline
 	position: relative
@@ -103,7 +103,7 @@ body
 	+clearfix
 	a
 		color: inherit
-		font-weight: bold
+		font-weight: calc(700 * var(--font-weight-factor))
 		+font-smooth
 		margin: 1rem $gutter / 2
 	img
@@ -168,7 +168,7 @@ footer
 		line-height: 2.5rem
 		box-shadow: none
 		border: none
-		font-weight: 700
+		font-weight: calc(700 * var(--font-weight-factor))
 		&:hover 
 			color: $muted !important
 			background-color: $bg !important

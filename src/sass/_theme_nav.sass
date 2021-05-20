@@ -14,17 +14,17 @@
 		padding: $space-nav $gutter
 		margin: $space-s 0 0 0
 		display: block
-		font-weight: 700
+		font-weight: calc(700 * var(--font-weight-factor))
 	& > :first-child
 		margin-top: 0 !important
 		
 	li.current 
-		background-color: $bg-panel !important
+		background-color: $bg-nav-current-list !important
 
 	li
-		
 		a
 			color: $nav-color
+			+transition(background-color 0.2s)
 			&:hover
 				background: $bg-nav-hover !important
 		code
@@ -116,7 +116,7 @@
 	li ul li a
 		margin-bottom: 0
 		color: $nav-color
-		font-weight: normal
+		font-weight: calc(450 * var(--font-weight-factor))
 	a
 		line-height: 18px
 		padding: $space-nav $gutter
@@ -150,15 +150,16 @@
 		border: 2px solid $border-search
 		background-color: transparent !important
 		-webkit-appearance: none !important
-		padding: 0 1rem
-		margin: 0 calc(-1rem - 2px)
+		padding: 0 1.1rem
+		margin: 0 calc(-1.1rem - 2px)
 		line-height: 2.6rem
-		font-weight: 700
+		font-weight: calc(450 * var(--font-weight-factor))
 		box-shadow: none
 		font-size: inherit
-		color: $nav-search-color
+		color: $text
+		border-radius: 100px
 		&:focus
-			border-color: $nav-search-color
+			border-color: $text
 			&::placeholder 
 				color: transparent;
 			&:-ms-input-placeholder  
@@ -167,22 +168,22 @@
 				color: transparent;
 
 	::placeholder 
-		color: $text;
+		color: $nav-search-color;
 	
 	:-ms-input-placeholder  
-		color: $text;
+		color: $nav-search-color;
 	
 	::-ms-input-placeholder 
-		color: $text;
+		color: $nav-search-color;
 
 	.brand
 		min-height: 9.5rem
 		height: 9.5rem
 		max-height: 9.5rem
 		> a	
-			color: $nav-search-color
+			color: $text
 			font-size: 100%
-			font-weight: bold
+			font-weight: calc(700 * var(--font-weight-factor))
 			display: inline-block
 			padding: 0
 			padding-top: 5px
@@ -200,9 +201,9 @@
 
 .wy-nav .wy-menu-vertical
 	header
-		color: $link-color
+		color: $text
 	a
-		color: $text-light
+		color: $text
 		&:hover
 			background-color: $link-color
 			color: $bg

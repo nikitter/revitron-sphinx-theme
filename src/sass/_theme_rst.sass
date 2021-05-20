@@ -20,23 +20,27 @@
 		letter-spacing: -0.02em
 		margin-top: 6.4rem
 		margin-bottom: $space-m + 0.18rem
-		font-weight: 720
+		font-weight: calc(700 * var(--font-weight-factor))
+		color: $headline
 
 	h2
 		font-size: 1.8rem
 		line-height: 1.25
-		letter-spacing: -0.02em
+		letter-spacing: -0.01em
 		margin-top: $space-m * 1.25
 		margin-bottom: $margin-rst !important
-		font-weight: 680
+		font-weight: calc(680 * var(--font-weight-factor))
 
 	h3, ul.search a
 		font-size: 1.5rem
 		line-height: 1.3
-		letter-spacing: -0.02em
+		letter-spacing: -0.01em
 		margin-top: $space-m
 		margin-bottom: $margin-rst !important
-		font-weight: 620
+		font-weight: calc(620 * var(--font-weight-factor))
+		color: $headline
+		&:after 
+			border: none !important
 
 	ul.search li a 
 		display: inline-block
@@ -44,30 +48,47 @@
 	h4
 		font-size: 1.3rem
 		line-height: 1.4
-		letter-spacing: -0.02em
+		letter-spacing: -0.01em
 		margin-top: $margin-rst
 		margin-bottom: $margin-rst !important
-		font-weight: 450
+		font-weight: calc(450 * var(--font-weight-factor))
+		color: $headline
 
 	h5
 		font-size: 1.15rem
 		line-height: 1.5
 		margin-top: $margin-rst
 		margin-bottom: $margin-rst !important
-		font-weight: 460
+		font-weight: calc(450 * var(--font-weight-factor))
+		color: $headline
 
 	hr
 		margin: $space-m 0
 		border-top: $hairline
 
-	li a, p a, dt a 
-		color: inherit
-		text-decoration: underline
+	a
 		+transition(color 0.2s)
+
+	.document li a, .document p a, .document dt a, footer a:not([class])
+		position: relative
+		color: $link-color	
+		font-weight: calc(580 * var(--font-weight-factor))
+		text-decoration: none
 		&:visited
-			color: inherit
+			color: $link-color-visited
 		&:hover
 			text-decoration: none
+			&:after
+				opacity: 0.8
+		&:after 
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			bottom: -3px
+			border-bottom: 1px solid
+			opacity: 0.3
+			+transition(opacity 0.2s)
 
 	p
 		margin-bottom: $margin-rst
@@ -99,7 +120,7 @@
 	&.style-external-links a.reference.external:after
 		font-family: FontAwesome
 		content: '\f08e'
-		color: $text-light
+		color: $link
 		vertical-align: super
 		font-size: 60%
 		margin: 0 0.2em
@@ -131,7 +152,7 @@
 	div[class^='highlight'] td.code
 		width: 100%
 	.linenodiv pre
-		border-right: solid 1px lighten($table-border-color, 2%)
+		border-right: solid 1px $table-border-color
 		margin: 0
 		padding: 1rem
 		font-family: $code-font-family
@@ -176,47 +197,46 @@
 		margin: $margin-rst 0
 		padding: $space-s
 		clear: both
-		background-color: $text
-		color: $bg
-		font-weight: 520
+		background-color: $info-bg
+		color: $info-text
+		font-weight: calc(450 * var(--font-weight-factor))
 		> *
 			margin: 0
-		*
-			color: inherit !important
-			background-color: inherit !important
 
 	.admonition-title
 		display: block
 		margin: 0 0 $space-s 0
-		color: inherit
+		color: $info-text
 		@extend .fa
-		@extend .fa-bolt
+		@extend .fa-fire
 		&:before
 			margin-right: 1rem
 			font-size: 120%
 
-	@mixin alert($icon: '.fa-bell', $color: $bg, $bg: $text)
+	@mixin alert($icon: '.fa-fire', $color: $info-text, $bg: $info-bg)
 		color: $color
 		background-color: $bg
 		.admonition-title
 			@extend #{$icon}
-			font-weight: 620
+			color: inherit
+			background-color: transparent
+			font-weight: calc(450 * var(--font-weight-factor))
 
 	.note, .seealso, .important, .hint, .tip
 		@include alert()
 
 	.error, .danger
-		@include alert('.fa-fire', $bg, #ff4234)
+		@include alert('.fa-fire', $danger-text, $danger-bg)
 
 	.warning, .caution, .attention, .admonition-todo
-		@include alert('.fa-bolt', $text, #fffc52)
+		@include alert('.fa-bolt', $warning-text, $warning-bg)
 
 	// Some people put tables in notes. Let's give them very basic support.
 	.admonition table
-		border-color: rgba(0,0,0,.1)
+		border-color: $border
 		td, th
 			background: transparent !important
-			border-color: rgba(0,0,0,.1) !important
+			border-color: $border !important
 	.section ul, .toctree-wrapper ul
 		@extend .wy-plain-list-disc
 	.section ol.loweralpha, .section ol.loweralpha > li
@@ -265,7 +285,7 @@
 		font-weight: bold
 		margin-bottom: 1rem
 	.toc-backref
-		color: $text-color
+		color: $text
 	.align-right
 		float: right
 		margin: 0px 0px $margin-rst $margin-rst
@@ -318,7 +338,7 @@
 		.sidebar-title
 			display: block
 			font-family: $custom-font-family
-			font-weight: bold
+			font-weight: calc(700 * var(--font-weight-factor))
 			background: $bg-panel
 			padding: 0.5rem 1rem
 			margin: -$margin-rst
@@ -330,7 +350,7 @@
 		background: $highlight-color !important
 		box-shadow: 0 0 0 1px $highlight-color
 		display: inline
-		font-weight: bold
+		font-weight: calc(700 * var(--font-weight-factor))
 
 	// These are the little citation links [1] that show up within paragraphs.
 	.footnote-reference, .citation-reference
@@ -393,7 +413,7 @@
 				margin: 0rem .5rem .5rem 0rem
 				line-height: 1.2rem
 				word-break: break-all
-				font-weight: normal
+				font-weight: calc(450 * var(--font-weight-factor))
 				> span.brackets
 					margin-right: .5rem
 					&:before
@@ -415,9 +435,9 @@
 	// Both
 	html.writer-html4 & table.docutils.citation, table.docutils.footnote,
 	html.writer-html5 & dl.footnote
-		color: $text-medium
+		color: $muted
 		code
-			color: $gray
+			color: $muted
 
 	// Remove the large vertical space between citations and footnotes
 	.wy-table-responsive.citation, .wy-table-responsive.footnote
@@ -473,7 +493,7 @@
 	// These are the "literals" that get spit out when you mark stuff as ``code`` as your write.
 	tt, code
 		@extend code
-		color: $black
+		color: $code
 		font-family: $code-font-family
 		padding: 2px 5px
 		big, em
@@ -483,7 +503,7 @@
 		&.literal
 			color: $text-code-color
 		&.xref, a &
-			font-weight: bold
+			font-weight: calc(700 * var(--font-weight-factor))
 			color: $text-codexref-color
 	pre, kbd, samp
 		font-family: $code-font-family
@@ -493,7 +513,7 @@
 	dl
 		margin-bottom: $margin-rst
 		dt
-			font-weight: bold
+			font-weight: calc(500 * var(--font-weight-factor))
 			margin-bottom: 1rem
 		// Most of the content within these dls are one liners, so I halve the normal margins.
 		p, table, ul, ol, > dd > [class*="highlight"]
@@ -511,7 +531,7 @@
 			font-size: 1rem
 			line-height: 1.6
 			background: $bg-code
-			color: $text
+			color: $code
 			padding: 0.4rem 0.8rem
 			position: relative
 			em.property
@@ -524,8 +544,10 @@
 			padding: 0.6rem 1.2rem
 			font-size: 1rem
 			line-height: 1.6
-			background: $text
-			color: $bg 	
+			background: $info-bg
+			color: $info-text
+			& * 
+				color: inherit
 	
 		// In the html4 writer, parameters is a table. In html5 writer, parameters
 		// is a nested dl.field-list
@@ -537,7 +559,7 @@
 			margin-top: 0
 		// Since dts get the callout style, we treat this less as callouts.
 		tt, code
-			font-weight: bold
+			font-weight: calc(500 * var(--font-weight-factor))
 			&.descname, &.descclassname
 				color: inherit
 				background-color: inherit !important
@@ -545,13 +567,13 @@
 				padding: 0
 				font-size: 100% !important
 			&.descname
-				font-weight: bold
+				font-weight: calc(500 * var(--font-weight-factor))
 		// This is for more advanced parameter control
 		.optional
 			display: inline-block
 			padding: 0 4px
-			color: $black
-			font-weight: bold
+			color: $text
+			font-weight: calc(500 * var(--font-weight-factor))
 		.property
 			display: inline-block
 			padding-right: 8px
@@ -561,13 +583,12 @@
 		color: inherit
 		font-size: 80%
 		opacity: 0.6;
-		padding-left: 0.65rem
 	.viewcode-back
 		display: block
 		float: right
 	p.rubric
 		margin-bottom: $margin-rst
-		font-weight: bold
+		font-weight: calc(500 * var(--font-weight-factor))
 	//Download link
 	code.download
 		background: inherit
@@ -588,7 +609,7 @@
 		border: $hairline
 		background: $bg-panel
 		font-size: 80%
-		font-weight: 700
+		font-weight: calc(500 * var(--font-weight-factor))
 		padding: 0.2rem 0.3rem
 		margin: auto $margin-rst / 10
 	.versionmodified

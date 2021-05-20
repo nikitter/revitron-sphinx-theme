@@ -2,16 +2,28 @@
 // that are set in wyrm_core/wy_variables.sass. You'll find wyrm in bower_components if you're looking
 // for a reference.
 
-$bg:							#ffffff
-$text:							#181818
-$bg-code:						#f8f8f8
-$bg-panel:						$bg-code
+$bg:							var(--bg)
+$text:							var(--text)
+$code:							var(--code)
+$headline:						var(--headline)
+$bg-code:						var(--bg-code)
+$bg-code-highlight:				var(--bg-code-highlight)
+$bg-panel:						var(--bg-panel)
 
-$border:						#dfdfdf
-$muted:							#b6b6b6
-$link:							$muted
+$border:						var(--border)
+$muted:							var(--muted)
+$link:							var(--link)
 						
 $border-search: 				$border
+
+$info-text:						var(--info-text)
+$info-bg:						var(--info-bg)
+$danger-text:					var(--danger-text)
+$danger-bg:						var(--danger-bg)
+$warning-text:					var(--warning-text)
+$warning-bg:					var(--warning-bg)
+
+$font-weight-factor:			var(--font-weight-factor)
 
 $radius: 0
 
@@ -37,29 +49,30 @@ $text-code-color:               $text
 $text-code-background-color:    $bg
 $text-code-border-color:        $bg
 
-$link-color:					$text
-$link-color-hover:				$muted
-$link-color-visited:			inherit
+$link-color:					$link
+$link-color-hover:				$text
+$link-color-visited:			$link
 
 $table-border-color: $border
 $table-stripe-color: $bg-panel
 
-$button-neutral-background-color: $bg
+$button-neutral-background-color: 	  $bg
 
 $fa-font-path:                        "~font-awesome/fonts"
 $static-img:                          "../img/"
 
 $nav-desktop-width:					  23rem
-$nav-content-width:                   58rem
+$nav-content-width:                   52rem
 $nav-media-query:             		  ($nav-desktop-width + $nav-content-width) * 0.85
 
-$mathjax-color:                       $text-color
+$mathjax-color:                       $text
 
-$headerlink-color:                    $text-color
+$headerlink-color:                    $text
 
 // Code colors
-$text-viewcode-color:                 $text
-$text-codexref-color:                 $text-color
+$text-code-color:					  $code
+$text-viewcode-color:                 $code
+$text-codexref-color:                 $code
 
 // Definition list colors
 $class-color:                         $text
@@ -69,17 +82,18 @@ $method-color:                        $text
 $footer-color:                        $muted
 
 // Menu colors
-$menu-vertical-background-color:      $bg
+$menu-vertical-background-color:      var(--bg-nav)
 
 // Navigation colors
-$nav-background-color:           	  $bg
-$bg-nav-hover:					 	  #f2f2f2
-$bg-nav-current:					  $text
-$nav-color:							  $text
-$nav-current:						  $bg
-$nav-caption:						  $text
+$nav-background-color:           	  var(--bg-nav)
+$bg-nav-hover:					 	  var(--bg-nav-hover)
+$bg-nav-current:					  var(--bg-nav-current)
+$bg-nav-current-list:				  var(--bg-nav-current-list)
+$nav-color:							  var(--nav)
+$nav-current:						  var(--nav-current)
+$nav-caption:						  $nav-color
 $nav-search-background-color:         $nav-background-color
-$nav-search-color:                    $text
+$nav-search-color:                    $nav-color
 
 // Sidebar colors
 $sidebar-background-color:            $bg
@@ -87,7 +101,7 @@ $sidebar-border-color:                $table-border-color
 $sidebar-title-background-color:      $bg
 
 // Sphinx highlight color
-$highlight-color:                     #fff9a3
+$highlight-color:                     var(--bg-highlight)
 
 $base-font-family:                    'Inter', sans-serif
 $custom-font-family:                  'Inter', sans-serif
