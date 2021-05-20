@@ -70,6 +70,13 @@ To activate the dark color scheme, you can simply add the following option to th
         'color_scheme': 'dark'
     }
 
+Custom Color Schemes
+====================
+
+Colors in this theme are controlled by CSS custom properties. Therefore it is quite easy to override either the light or the 
+dark color scheme by defining custom colors for those properties in an additional CSS file that is added 
+using the `conf.py` of your docs. A full list of available properties can be found in `here <https://github.com/revitron/revitron-sphinx-theme/blob/master/src/sass/_colors.sass>`_.
+
 Adding a Landing Page
 =====================
 
