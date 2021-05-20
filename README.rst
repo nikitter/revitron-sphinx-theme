@@ -131,3 +131,5 @@ If you would like to help modify or translate the theme, you'll find more
 information on contributing in the `contributing guide`_ of the original theme.
 
 .. _contributing guide: https://sphinx-rtd-theme.readthedocs.io/en/latest/contributing.html
+
+.. image:: https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/revitron/mobile-dark.png
