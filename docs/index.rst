@@ -6,7 +6,7 @@ Revitron
 
 .. container:: .large
 	
-   The Revitron library can be installed as a single Python package for pyRevit or bundled with a custom fork of pyRevit including the Jarvis package manager und the Revitron UI.
+   The Revitron library can be installed as a single Python package for `pyRevit <#>`_ or bundled with a custom fork of pyRevit including the Jarvis package manager und the Revitron UI.
 
 .. container:: .buttons
 
