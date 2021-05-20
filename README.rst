@@ -62,6 +62,8 @@ This theme is highly customizable on both the page level and on a global level.
 Dark Mode
 =========
 
+.. image:: https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/revitron/default-dark.png
+
 To activate the dark color scheme, you can simply add the following option to the ``html_theme_options``:
 
 .. code:: python
@@ -96,6 +98,9 @@ It can be enabled and configured in the ``conf.py`` as follows.
     }
 
 .. image:: https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/revitron/landing.png
+
+.. image:: https://raw.githubusercontent.com/marcantondahmen/media-files/master/themes/revitron/landing-dark.png
+
 
 Container Classes
 =================
