@@ -10,7 +10,7 @@
 {%- set sphinx_writer = 'writer-html5' if html5_doctype else 'writer-html4' %}
 
 <!DOCTYPE html>
-<html class="{{ sphinx_writer }}{% block style %}{% endblock %}" lang="{{ lang_attr }}" >
+<html class="{{ sphinx_writer }}{% block style %}{% endblock %} {{ theme_color_scheme }}" lang="{{ lang_attr }}" >
 <head>
 	<meta charset="utf-8">
 	{{ metatags }}

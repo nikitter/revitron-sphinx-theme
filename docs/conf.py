@@ -65,7 +65,8 @@ html_theme = 'revitron_sphinx_theme'
 html_theme_options = {
     'navigation_depth': 5,
     'logo_mobile': 'revitron-ui-mobile.svg',
-    'github_url': 'https://github.com/revitron/revitron'
+    'github_url': 'https://github.com/revitron/revitron',
+	'color_scheme': 'dark'
 }
 
 html_context = {
