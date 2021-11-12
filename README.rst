@@ -54,7 +54,7 @@ This theme is highly customizable on both the page level and on a global level.
         'includehidden': True,
         'titles_only': False,
         'github_url': '',
-        'logo_mobile': 'demo/static/logo-mobile.svg
+        'logo_mobile': 'demo/static/logo-mobile.svg'
     }
 
     html_logo = 'demo/static/logo.svg'
